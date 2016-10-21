@@ -18,13 +18,15 @@
 
 import {BlogRender} from "./BlogRender";
 import DefHomepageRender from "./default/homepage/DefHomepageRender";
+import DefPostPreviewRender from "./default/post/DefPostPreviewRender";
 
 
 export default class RenderEngines {
 
     static defRender: BlogRender = {
         name: 'default',
-        homepage: DefHomepageRender
+        homepage: DefHomepageRender,
+        postPreview: DefPostPreviewRender
     };
 
 /*

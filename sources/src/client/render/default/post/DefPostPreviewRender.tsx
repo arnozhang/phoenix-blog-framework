@@ -16,25 +16,20 @@
  * limitations under the License.
  */
 
-import * as React from "react";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 
-import {RetCodes} from "../../../base/RetCodes";
-import MiscUtils from "../../base/utils/MiscUtils";
-import PlainLink from "../../base/component/PlainLink";
-import MarkDownContent from "../../base/markdown/MarkDownContent";
+import MiscUtils from "../../../base/utils/MiscUtils";
+import {RetCodes} from "../../../../base/RetCodes";
+import PlainLink from "../../../base/component/PlainLink";
+import MarkDownContent from "../../../base/markdown/MarkDownContent";
 
-const cssStyles = require('./../homepage/homepage.css');
+import {PostPreviewRender, PostPreviewProps} from "../../BlogRender";
 
-
-interface Props {
-    post: any;
-    isLast: boolean;
-    extraRender?: (post: any) => any;
-    fromInternal?: boolean;
-}
+const cssStyles = require('../styles.css');
 
 
-export default class PostPreview extends React.Component<Props, any> {
+export default class DefPostPreviewRender extends PostPreviewRender<PostPreviewProps, any> {
 
     render() {
         let post = this.props.post;

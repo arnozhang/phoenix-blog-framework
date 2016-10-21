@@ -20,9 +20,9 @@ import * as React from "react";
 
 import MiscUtils from "../../base/utils/MiscUtils";
 
-import PostPreview from "./PostPreview";
 import PageIndexes from "../homepage/PageIndexes";
 import TitleHeader from "../../render/default/common/TitleHeader";
+import RenderEngines from "../../render/RenderEngines";
 
 const cssStyles = require('../homepage/homepage.css');
 
@@ -86,6 +86,8 @@ export default class PostList extends React.Component<Props, any> {
 
     render() {
         let posts: any = null;
+        let PostPreview = RenderEngines.getRender(pageData.render).postPreview;
+
         if (this.postList && this.postList.posts && this.postList.posts.length > 0) {
             posts = this.postList.posts.map((post: any, index: number) => {
                 return (

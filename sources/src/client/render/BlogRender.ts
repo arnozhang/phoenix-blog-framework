@@ -19,9 +19,22 @@
 import * as React from "react";
 
 
+export interface PostPreviewProps {
+    post: any;
+    isLast: boolean;
+    extraRender?: (post: any) => any;
+    fromInternal?: boolean;
+}
+
+export class PostPreviewRender<P extends PostPreviewProps, S> extends React.Component<P, S> {
+}
+
+
 export interface BlogRender {
 
     name: string;
+
     homepage: any;
     _404?: any;
+    postPreview: any;
 }
