@@ -21,6 +21,9 @@ import * as React from "react";
 import {PostListFetcher} from "../blog/post/PostList";
 
 
+//
+// Post preview render.
+//
 export interface PostPreviewProps {
     post: any;
     isLast: boolean;
@@ -32,6 +35,9 @@ export class PostPreviewRender<P extends PostPreviewProps, S> extends React.Comp
 }
 
 
+//
+// Category post list render.
+//
 export interface CategoryPostProps {
     categoryId: string;
     fetcher?: PostListFetcher;
@@ -41,6 +47,9 @@ export class CategoryPostRender<P extends CategoryPostProps, S> extends React.Co
 }
 
 
+//
+// Post detail page render.
+//
 export interface PostDetailProps {
     post: any;
     loading: boolean;
@@ -51,10 +60,26 @@ export class PostDetailRender<P extends PostDetailProps, S> extends React.Compon
 }
 
 
+//
+// Page indexes render.
+//
+export interface PageIndexesProps {
+    pageCount: number;
+    currentPage: number;
+    pageJumpIndex?: string;
+}
+
+
+export default class PageIndexesRender<P extends PageIndexesProps, S> extends React.Component<P, S> {
+}
+
+
+
 export interface BlogRender {
 
     name: string;
 
+    pageIndexes: any;
     homepage: any;
     _404?: any;
     postPreview: any;

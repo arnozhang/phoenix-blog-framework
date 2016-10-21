@@ -19,8 +19,6 @@
 import * as React from "react";
 
 import MiscUtils from "../../base/utils/MiscUtils";
-
-import PageIndexes from "../homepage/PageIndexes";
 import TitleHeader from "../../render/default/common/TitleHeader";
 import RenderEngines from "../../render/RenderEngines";
 
@@ -109,8 +107,9 @@ export default class PostList extends React.Component<Props, any> {
 
         let postsIndex: any = null;
         if (this.postList && this.postList.pageCount > 1) {
+            let PageIndexesRender_ = RenderEngines.getRender(pageData.render).pageIndexes;
             postsIndex = (
-                <PageIndexes
+                <PageIndexesRender_
                     pageJumpIndex={this.props.pageJumpIndex}
                     currentPage={this.currentPage}
                     pageCount={this.postList.pageCount}/>

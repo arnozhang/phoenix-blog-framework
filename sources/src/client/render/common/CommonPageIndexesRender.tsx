@@ -17,20 +17,13 @@
  */
 
 import * as React from "react";
-
 import PlainLink from "../../base/component/PlainLink";
+import PageIndexesRender, {PageIndexesProps} from "../BlogRender";
 
-const cssStyles = require('./homepage.css');
-
-
-interface Props {
-    pageCount: number;
-    currentPage: number;
-    pageJumpIndex?: string;
-}
+const cssStyles = require('./common.css');
 
 
-export default class PageIndexes extends React.Component<Props, any> {
+export default class CommonPageIndexesRender extends PageIndexesRender<PageIndexesProps, any> {
 
     pageHref(index: number) {
         if (this.props.pageJumpIndex && this.props.pageJumpIndex.length > 0) {

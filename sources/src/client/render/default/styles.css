@@ -44,34 +44,6 @@
     background-color: rgba(178, 233, 219, 0.3);
 }
 
-.pageIndex {
-    padding: 4px 8px;
-    font-size: 13px;
-    margin-left: 5px;
-    margin-right: 5px;
-    cursor: pointer;
-    border: solid 1px #009688;
-    border-radius: 5px;
-    background-color: #B2DFDB;
-    color: #333;
-    user-select: none;
-}
-
-.pageIndexSelected {
-    composes: pageIndex;
-    background-color: #B3E5FC;
-    user-select: none;
-}
-
-.pageIndex:hover {
-    color: white;
-    background-color: #80CBC4;
-}
-
-.pageIndex:active {
-    background-color: #4DB6AC;
-}
-
 .titleHeader {
     display: flex;
     flex-direction: column;

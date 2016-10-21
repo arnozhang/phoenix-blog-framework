@@ -21,12 +21,14 @@ import DefHomepageRender from "./default/homepage/DefHomepageRender";
 import DefPostPreviewRender from "./default/post/DefPostPreviewRender";
 import DefCategoryPostRender from "./default/post/DefCategoryPostRender";
 import {DefPostDetailRender} from "./default/post/DefPostDetailRender";
+import CommonPageIndexesRender from "./common/CommonPageIndexesRender";
 
 
 export default class RenderEngines {
 
     static defRender: BlogRender = {
         name: 'default',
+        pageIndexes: CommonPageIndexesRender,
         homepage: DefHomepageRender,
         postPreview: DefPostPreviewRender,
         postDetail: DefPostDetailRender,
