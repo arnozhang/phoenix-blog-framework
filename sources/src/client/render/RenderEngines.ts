@@ -25,6 +25,7 @@ import CommonPageIndexesRender from "./common/CommonPageIndexesRender";
 import DefTagDetailListRender from "./default/post/DefTagDetailListRender";
 import DefTagPostRender from "./default/post/DefTagPostListRender";
 import DefTimelinePostRender from "./default/post/DefTimelineListRender";
+import DefTimelinePostDetailRender from "./default/post/DefTimelinePostDetailRender";
 
 
 declare var pageData: any;
@@ -41,7 +42,8 @@ export default class RenderEngines {
         categoryPost: DefCategoryPostRender,
         tagDetailList: DefTagDetailListRender,
         tagPostList: DefTagPostRender,
-        timelineList: DefTimelinePostRender
+        timelineList: DefTimelinePostRender,
+        timelinePostList: DefTimelinePostDetailRender
     };
 
 
@@ -54,7 +56,8 @@ export default class RenderEngines {
         categoryPost: DefCategoryPostRender,
         tagDetailList: DefTagDetailListRender,
         tagPostList: DefTagPostRender,
-        timelineList: DefTimelinePostRender
+        timelineList: DefTimelinePostRender,
+        timelinePostList: DefTimelinePostDetailRender
     };
 
 

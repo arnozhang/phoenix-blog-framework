@@ -107,6 +107,19 @@ export class TimelineListRender<P extends TimelineListProps, S> extends React.Co
 }
 
 
+//
+// Tag post list render.
+//
+export interface TimelinePostListProps {
+    year: string;
+    month: string;
+    fetcher: PostListFetcher;
+}
+
+export class TimelinePostListRender<P extends TimelinePostListProps, S> extends React.Component<P, S> {
+}
+
+
 export interface BlogRender {
 
     name: string;
@@ -120,4 +133,5 @@ export interface BlogRender {
     tagDetailList: any;
     tagPostList: any;
     timelineList: any;
+    timelinePostList: any;
 }

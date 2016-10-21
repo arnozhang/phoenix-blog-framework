@@ -19,8 +19,7 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 
-import PostList from "./PostList";
-import BannerFrame from "../../render/default/common/BannerFrame";
+import RenderEngines from "../../render/RenderEngines";
 
 
 declare var pageData: any;
@@ -29,13 +28,12 @@ declare var pageData: any;
 export default class TimelinePostDetail extends React.Component<any, any> {
 
     render() {
+        let TimelinePostListRender_ = RenderEngines.getRender().timelinePostList;
         return (
-            <BannerFrame>
-                <PostList
-                    title={`${pageData.year}年${pageData.month}月`}
-                    pageJumpIndex={`/timeline_post_detail/${pageData.year}/${pageData.month}`}
-                    fetcher={this.postListFetcher.bind(this)}/>
-            </BannerFrame>
+            <TimelinePostListRender_
+                year={pageData.year}
+                month={pageData.month}
+                fetcher={this.postListFetcher.bind(this)}/>
         );
     }
 
