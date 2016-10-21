@@ -51,7 +51,7 @@ export class ReqRouter {
         let authFailed = (rsp: Response) => {
             rsp.set('WWW-Authenticate', 'Basic realm="Please Enter UserName & Password"');
 
-            return rsp.status(401).render('normal.jade', {
+            return rsp.status(401).render('normal.pug', {
                 title: 'Auth Failed',
                 js: [CgiHelper.pageJs('admin_auth_failed')]
             });

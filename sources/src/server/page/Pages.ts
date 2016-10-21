@@ -28,7 +28,7 @@ export function clientPagesRouter() {
 
         @ReqRouter.RouteCgi('/')
         static homepage(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: config.site.siteTitle,
                 js: [CgiHelper.pageJs('homepage')]
             });
@@ -36,7 +36,7 @@ export function clientPagesRouter() {
 
         @ReqRouter.RouteCgi('/post/:postId')
         static postDetail(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: '文章详情',
                 js: [CgiHelper.pageJs('post')],
                 data: {
@@ -47,7 +47,7 @@ export function clientPagesRouter() {
 
         @ReqRouter.RouteCgi('/category_post/:categoryId')
         static categoryPosts(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: '分类列表',
                 js: [CgiHelper.pageJs('category_post')],
                 data: {
@@ -58,7 +58,7 @@ export function clientPagesRouter() {
 
         @ReqRouter.RouteCgi('/timeline_list')
         static timelinePosts(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: '时间轴列表',
                 js: [CgiHelper.pageJs('timeline_post')],
                 data: {
@@ -69,7 +69,7 @@ export function clientPagesRouter() {
 
         @ReqRouter.RouteCgi('/timeline_post_detail/:year/:month')
         static timelinePostsDetail(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: `时间轴列表 - ${req.params.year}年${req.params.month}月`,
                 js: [CgiHelper.pageJs('timeline_post_detail')],
                 data: {
@@ -81,7 +81,7 @@ export function clientPagesRouter() {
 
         @ReqRouter.RouteCgi('/about_author')
         static aboutAuthor(req: Request, rsp: Response) {
-            rsp.render('normal.jade', {
+            rsp.render('normal.pug', {
                 title: '关于作者',
                 js: [CgiHelper.pageJs('about_author')]
             });
@@ -89,7 +89,7 @@ export function clientPagesRouter() {
 
         @ReqRouter.RouteCgi('/tag_posts/:tagName')
         static tagPosts(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: '分类列表',
                 js: [CgiHelper.pageJs('tag_post')],
                 data: {
@@ -100,7 +100,7 @@ export function clientPagesRouter() {
 
         @ReqRouter.RouteCgi('/tag_list')
         static tagList(req: Request, rsp: Response) {
-            rsp.render('normal.jade', {
+            rsp.render('normal.pug', {
                 title: '标签列表',
                 js: [CgiHelper.pageJs('tag_detail_list')]
             });
@@ -114,7 +114,7 @@ export function adminPagesRouter() {
 
         @ReqRouter.AdminRouteCgi('/admin')
         static adminIndex(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: '后台管理系统',
                 js: [CgiHelper.pageJs('admin_index')]
             });
@@ -122,7 +122,7 @@ export function adminPagesRouter() {
 
         @ReqRouter.AdminRouteCgi('/category_manager')
         static categoryManager(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: '分类管理',
                 js: [CgiHelper.pageJs('category_manager')]
             });
@@ -130,7 +130,7 @@ export function adminPagesRouter() {
 
         @ReqRouter.AdminRouteCgi('/comment_manager')
         static commentManager(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: '评论管理',
                 js: [CgiHelper.pageJs('comment_manager')]
             });
@@ -138,7 +138,7 @@ export function adminPagesRouter() {
 
         @ReqRouter.AdminRouteCgi('/write_new_post')
         static writeNewPost(req: Request, rsp: Response) {
-            rsp.render('write-new-post.jade', {
+            rsp.render('write-new-post.pug', {
                 title: '写新文章',
                 js: [CgiHelper.pageJs('write_new_post')]
             });
@@ -146,7 +146,7 @@ export function adminPagesRouter() {
 
         @ReqRouter.AdminRouteCgi('/admin_category_post/:categoryId')
         static adminCategoryPost(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: '分类列表',
                 js: [CgiHelper.pageJs('admin_category_post')],
                 data: {
@@ -165,7 +165,7 @@ export function errorPagesRouter() {
         static error404(req: Request, rsp: Response) {
             console.log(`** No Route for ${req.url}`);
 
-            rsp.render('with-scrollbar-markdown.jade', {
+            rsp.render('with-scrollbar-markdown.pug', {
                 title: '404!',
                 js: [CgiHelper.pageJs('404')]
             });
