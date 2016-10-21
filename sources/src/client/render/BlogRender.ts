@@ -96,6 +96,17 @@ export class TagPostListRender<P extends TagPostListProps, S> extends React.Comp
 }
 
 
+//
+// Tag post list render.
+//
+export interface TimelineListProps {
+    list: any[];
+}
+
+export class TimelineListRender<P extends TimelineListProps, S> extends React.Component<P, S> {
+}
+
+
 export interface BlogRender {
 
     name: string;
@@ -108,4 +119,5 @@ export interface BlogRender {
     categoryPost: any;
     tagDetailList: any;
     tagPostList: any;
+    timelineList: any;
 }

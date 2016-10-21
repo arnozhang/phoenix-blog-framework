@@ -20,10 +20,10 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as $ from "jquery";
 
-import PlainLink from "../../base/component/PlainLink";
+import RenderEngines from "../../render/RenderEngines";
 
-import TitleHeader from "../../render/default/common/TitleHeader";
-import BannerFrame from "../../render/default/common/BannerFrame";
+
+declare var pageData: any;
 
 
 export default class PostTimeline extends React.Component<any, any> {
@@ -39,50 +39,12 @@ export default class PostTimeline extends React.Component<any, any> {
     }
 
     render() {
-        let postList: any = null;
-        if (!this.list || this.list.length <= 0) {
-            postList = (
-                <span style={{fontSize: 20, marginTop: 40}}>
-                    暂无时间轴列表！
-                </span>
-            );
-        } else {
-            postList = this.list.map((item: any, index: number) => {
-                return (
-                    <li>
-                        <PlainLink
-                            key={index}
-                            style={{marginTop: 10}}
-                            text={`${item.date} (${Math.max(0, item.count)})`}
-                            href={`/timeline_post_detail/${item.year}/${item.month}`}/>
-                    </li>
-                );
-            });
-        }
-
+        let TimeListRender_ = RenderEngines.getRender(pageData.render).timelineList;
         return (
-            <BannerFrame>
-                <div style={{display: 'flex', flexDirection: 'column'}}>
-                    <TitleHeader title='时间轴列表'/>
-                    <div style={styles.time_list}>
-                        <ul>
-                            {postList}
-                        </ul>
-                    </div>
-                </div>
-            </BannerFrame>
+            <TimeListRender_ list={this.list}/>
         );
     }
 }
-
-
-const styles = {
-    time_list: {
-        marginTop: 40,
-        marginLeft: 30,
-        marginBottom: 80
-    }
-};
 
 
 ReactDOM.render(

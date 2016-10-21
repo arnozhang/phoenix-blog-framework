@@ -24,6 +24,7 @@ import {DefPostDetailRender} from "./default/post/DefPostDetailRender";
 import CommonPageIndexesRender from "./common/CommonPageIndexesRender";
 import DefTagDetailListRender from "./default/post/DefTagDetailListRender";
 import DefTagPostRender from "./default/post/DefTagPostListRender";
+import DefTimelinePostRender from "./default/post/DefTimelineListRender";
 
 
 export default class RenderEngines {
@@ -36,13 +37,14 @@ export default class RenderEngines {
         postDetail: DefPostDetailRender,
         categoryPost: DefCategoryPostRender,
         tagDetailList: DefTagDetailListRender,
-        tagPostList: DefTagPostRender
+        tagPostList: DefTagPostRender,
+        timelineList: DefTimelinePostRender
     };
 
     /*
      static simpleRender: BlogRender = {
-        name: 'simple'
-        pageIndexes: CommonPageIndexesRender,
+     name: 'simple'
+     pageIndexes: CommonPageIndexesRender,
      };*/
 
     static getRender(name: string): BlogRender {
