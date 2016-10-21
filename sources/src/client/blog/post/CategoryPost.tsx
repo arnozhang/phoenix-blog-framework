@@ -24,6 +24,7 @@ import {RetCodes} from "../../../base/RetCodes";
 
 import BannerFrame from "../../render/default/common/BannerFrame";
 import PostList from "./PostList";
+import RenderEngines from "../../render/RenderEngines";
 
 
 declare var pageData: any;
@@ -57,13 +58,11 @@ export default class CategoryPost extends React.Component<any, any> {
     }
 
     render() {
+        let CategoryPostRender = RenderEngines.getRender(pageData.render).categoryPost;
         return (
-            <BannerFrame>
-                <PostList
-                    ref='postList'
-                    pageJumpIndex={`/category_post/${pageData.categoryId}`}
-                    fetcher={this.postListFetcher.bind(this)}/>
-            </BannerFrame>
+            <CategoryPostRender
+                categoryId={pageData.categoryId}
+                fetcher={this.postListFetcher.bind(this)}/>
         );
     }
 }

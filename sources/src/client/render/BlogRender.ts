@@ -18,6 +18,8 @@
 
 import * as React from "react";
 
+import {PostListFetcher} from "../blog/post/PostList";
+
 
 export interface PostPreviewProps {
     post: any;
@@ -30,6 +32,15 @@ export class PostPreviewRender<P extends PostPreviewProps, S> extends React.Comp
 }
 
 
+export interface CategoryPostProps {
+    categoryId: string;
+    fetcher?: PostListFetcher;
+}
+
+export class CategoryPostRender<P extends CategoryPostProps, S> extends React.Component<P, S> {
+}
+
+
 export interface BlogRender {
 
     name: string;
@@ -37,4 +48,5 @@ export interface BlogRender {
     homepage: any;
     _404?: any;
     postPreview: any;
+    categoryPost: any;
 }

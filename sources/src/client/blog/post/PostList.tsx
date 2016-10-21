@@ -86,12 +86,12 @@ export default class PostList extends React.Component<Props, any> {
 
     render() {
         let posts: any = null;
-        let PostPreview = RenderEngines.getRender(pageData.render).postPreview;
+        let PostPreviewRender = RenderEngines.getRender(pageData.render).postPreview;
 
         if (this.postList && this.postList.posts && this.postList.posts.length > 0) {
             posts = this.postList.posts.map((post: any, index: number) => {
                 return (
-                    <PostPreview
+                    <PostPreviewRender
                         key={index} post={post}
                         fromInternal={this.props.fromInternal}
                         extraRender={this.props.previewExtraRender}
