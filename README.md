@@ -128,4 +128,4 @@ node ./dist/build/server/index.js
 sudo forever start ./dist/build/server/index.js
 ```
 
-需要注意的是，在 Linux 环境下，当启动 80 端口时，需要 sudo 权限。
+**需要注意的是，在 Linux 环境下，当启动 80 端口时，需要 sudo 权限。**
