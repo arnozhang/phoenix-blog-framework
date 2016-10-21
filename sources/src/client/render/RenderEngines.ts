@@ -70,6 +70,8 @@ export default class RenderEngines {
     }
 
     static getRender(): BlogRender {
-        return RenderEngines.getRenderByName(pageData.render);
+        return pageData != null
+            ? RenderEngines.getRenderByName(pageData.render)
+            : RenderEngines.defRender;
     }
 }
