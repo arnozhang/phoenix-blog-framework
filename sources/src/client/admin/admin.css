@@ -1,3 +1,11 @@
+.titleHeader {
+    display: flex;
+    flex-direction: column;
+    background-color: #E0F2F1;
+    padding: 20px 30px;
+    border-bottom: dotted 1px #80CBC4;
+}
+
 .adminTab {
     padding: 10px 20px;
     margin-right: 20px;

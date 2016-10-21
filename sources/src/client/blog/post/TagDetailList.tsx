@@ -23,8 +23,6 @@ import *as $ from "jquery";
 import {RetCodes} from "../../../base/RetCodes";
 import RenderEngines from "../../render/RenderEngines";
 
-const cssStyles = require('../homepage/homepage.css');
-
 
 export default class TagDetailList extends React.Component<any, any> {
 

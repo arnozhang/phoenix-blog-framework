@@ -24,7 +24,7 @@ import PlainLink from "../../../base/component/PlainLink";
 
 import BaseHeadBanner, {HeadBannerProps} from "./BaseHeadBanner";
 
-const cssStyles = require('../../../blog/homepage/homepage.css');
+const cssStyles = require('../default-styles.css');
 
 
 interface TagItemProps {

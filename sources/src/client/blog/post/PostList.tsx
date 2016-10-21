@@ -22,8 +22,6 @@ import MiscUtils from "../../base/utils/MiscUtils";
 import TitleHeader from "../../render/default/common/TitleHeader";
 import RenderEngines from "../../render/RenderEngines";
 
-const cssStyles = require('../homepage/homepage.css');
-
 
 export type PostListFetcher =
     (currentPage: number, count: number, callback: (data: any) => void) => void;

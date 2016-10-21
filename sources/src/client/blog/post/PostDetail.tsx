@@ -23,8 +23,6 @@ import {RetCodes} from "../../../base/RetCodes";
 import MiscUtils from "../../base/utils/MiscUtils";
 import RenderEngines from "../../render/RenderEngines";
 
-const cssStyles = require('../homepage/homepage.css');
-
 
 declare var pageData: any;
 

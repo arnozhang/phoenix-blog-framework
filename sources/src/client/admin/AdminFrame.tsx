@@ -24,7 +24,6 @@ import BlogFooter from "../base/BlogFooter";
 import ScrollTopBottom from "../base/component/ScrollTopBottom";
 
 let cssStyles = require('./admin.css');
-let homepageStyles = require('../blog/homepage/homepage.css');
 let buttonStyles = require('./button.css');
 
 
@@ -73,7 +72,7 @@ export default class AdminFrame extends React.Component<Props, any> {
                     <div style={styles.content_root}>
                         <div className='with-scroll-bar content-root-frame'>
                             <div style={{flexDirection: 'row', alignItems: 'center'}}
-                                 className={homepageStyles.titleHeader}>
+                                 className={cssStyles.titleHeader}>
                                 <img style={{width: 36, height: 36, marginRight: 15}}
                                      src='/blog-icon.png'/>
                                 <h1>后台管理系统</h1>

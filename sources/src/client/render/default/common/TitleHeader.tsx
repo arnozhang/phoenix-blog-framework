@@ -21,7 +21,7 @@ import * as React from "react";
 import MiscUtils from "../../../base/utils/MiscUtils";
 import FontAwesome from "../../../base/component/FontAwesome";
 
-const cssStyles = require('../../../blog/homepage/homepage.css');
+const cssStyles = require('../default-styles.css');
 
 
 interface Props {
