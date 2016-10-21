@@ -21,7 +21,7 @@ import * as ReactDOM from "react-dom";
 import * as $ from "jquery";
 
 import PostList from "./PostList";
-import BannerFrame from "../common/BannerFrame";
+import BannerFrame from "../../render/default/common/BannerFrame";
 
 
 declare var pageData: any;

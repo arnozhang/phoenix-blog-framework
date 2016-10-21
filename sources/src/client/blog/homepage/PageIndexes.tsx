@@ -128,5 +128,5 @@ const styles = {
         paddingLeft: 10,
         paddingRight: 10,
         alignItems: 'center'
-    }
+    } as React.CSSProperties
 };

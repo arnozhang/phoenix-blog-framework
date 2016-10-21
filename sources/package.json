@@ -9,28 +9,28 @@
   "author": "arnozhang",
   "license": "Apache-2.0",
   "devDependencies": {
-    "css-loader": "^0.24.0",
+    "css-loader": "^0.25.0",
     "forever": "^0.15.2",
     "json-loader": "^0.5.4",
     "pug": "^2.0.0-beta6",
     "source-map-loader": "^0.1.5",
-    "ts-loader": "^0.8.2",
+    "ts-loader": "^0.9.5",
     "style-loader": "^0.13.1"
   },
   "dependencies": {
     "basic-auth": "^1.0.4",
     "body-parser": "^1.15.2",
-    "codemirror": "^5.18.2",
+    "codemirror": "^5.20.2",
     "express": "^4.14.0",
     "jquery": "^3.1.0",
     "lodash": "^4.15.0",
-    "mongodb": "^2.2.9",
+    "mongodb": "^2.2.10",
     "mongoose": "^4.5.10",
     "react": "^15.3.1",
     "react-codemirror": "^0.2.6",
     "react-dom": "^15.3.1",
     "react-fontawesome": "^1.1.0",
-    "remarkable": "^1.6.2",
+    "remarkable": "^1.7.1",
     "webpack": "^1.13.2"
   }
 }

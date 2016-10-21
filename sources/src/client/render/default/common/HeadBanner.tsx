@@ -18,13 +18,13 @@
 
 import * as React from "react";
 
-import MiscUtils from "../../base/utils/MiscUtils";
-import FontAwesome from "../../base/component/FontAwesome";
-import PlainLink from "../../base/component/PlainLink";
+import MiscUtils from "../../../base/utils/MiscUtils";
+import FontAwesome from "../../../base/component/FontAwesome";
+import PlainLink from "../../../base/component/PlainLink";
 
 import BaseHeadBanner, {HeadBannerProps} from "./BaseHeadBanner";
 
-const cssStyles = require('./../homepage/homepage.css');
+const cssStyles = require('../../../blog/homepage/homepage.css');
 
 
 interface TagItemProps {
@@ -97,7 +97,7 @@ export default class HeadBanner extends BaseHeadBanner< any> {
                 <PlainLink href='/' selfWindow={true}>
                     <img
                         style={styles.head_portrait}
-                        src={MiscUtils.ensure(info.portrait, '/default_portrait.jpg')}/>
+                        src={MiscUtils.ensure(info.portrait, '/default_portrait.png')}/>
                 </PlainLink>
 
                 <PlainLink className={cssStyles.mainSite} href='/' selfWindow={true}>
@@ -172,7 +172,7 @@ const styles = {
         marginTop: 40,
         justifyContent: 'center',
         alignItems: 'center'
-    },
+    } as React.CSSProperties,
     count: {
         color: 'white',
         fontSize: 14,

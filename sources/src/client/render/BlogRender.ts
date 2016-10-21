@@ -16,28 +16,12 @@
  * limitations under the License.
  */
 
-export var config = {
-    db: {
-        host: 'localhost',
-        port: 27017,
-        database_name: 'phoenix_blog'
-    },
+import * as React from "react";
 
-    user: {
-        userName: 'phoenix blog',
-        email: 'zyfgood12@163.com',
-        portrait: '/default_portrait.png'
-    },
 
-    site: {
-        siteTitle: 'Phoenix Blog',
-        subTitle: 'github.com@phoenix_blog',
-    },
+export interface BlogRender {
 
-    render: 'default',
-
-    admin: {
-        name: 'admin',
-        password: '123456'
-    }
-};
+    name: string;
+    homepage: any;
+    _404?: any;
+}

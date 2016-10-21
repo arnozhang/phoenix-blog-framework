@@ -19,9 +19,9 @@
 import * as React from "react";
 import HeadBanner from "./HeadBanner";
 
-import BlogFooter from "../../base/BlogFooter";
-import MiscUtils from "../../base/utils/MiscUtils";
-import ScrollTopBottom from "../../base/component/ScrollTopBottom";
+import BlogFooter from "../../../base/BlogFooter";
+import MiscUtils from "../../../base/utils/MiscUtils";
+import ScrollTopBottom from "../../../base/component/ScrollTopBottom";
 
 import MobileHeadBanner from "./MobileHeadBanner";
 
@@ -46,7 +46,7 @@ class FrameForDesktop extends React.Component<Props, any> {
             backgroundColor: '#33888b',
             backgroundSize: 'cover',
             backgroundImage: 'url(/main_bkg_2.jpg)'
-        },
+        } as React.CSSProperties,
         content_root: {
             display: 'flex',
             flexDirection: 'row',

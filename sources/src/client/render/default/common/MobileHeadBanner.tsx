@@ -18,12 +18,12 @@
 
 import * as React from "react";
 
-import MiscUtils from "../../base/utils/MiscUtils";
-import PlainLink from "../../base/component/PlainLink";
+import MiscUtils from "../../../base/utils/MiscUtils";
+import PlainLink from "../../../base/component/PlainLink";
 
 import BaseHeadBanner, {HeadBannerProps} from "./BaseHeadBanner";
 
-const cssStyles = require('./../homepage/homepage.css');
+const cssStyles = require('../../../blog/homepage/homepage.css');
 
 
 export default class MobileHeadBanner extends BaseHeadBanner<any> {
@@ -44,7 +44,7 @@ export default class MobileHeadBanner extends BaseHeadBanner<any> {
                     <PlainLink href='/' selfWindow={true}>
                         <img
                             style={styles.head_portrait}
-                            src={MiscUtils.ensure(info.portrait, '/default_portrait.jpg')}/>
+                            src={MiscUtils.ensure(info.portrait, '/default_portrait.png')}/>
                     </PlainLink>
 
                     <div

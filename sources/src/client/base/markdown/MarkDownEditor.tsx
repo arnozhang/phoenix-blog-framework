@@ -19,7 +19,7 @@
 import * as React from "react";
 import {ReactInstance} from "react";
 import * as assign from "lodash/assign";
-import ReactCodeMirror = ReactCodeMirror.ReactCodeMirror;
+import * as ReactCodeMirror from "react-codemirror";
 
 import MarkDownContent from "./MarkDownContent";
 import AppUtils from "../utils/AppUtils";
@@ -53,7 +53,7 @@ export default class MarkDownEditor extends React.Component<Props, any> {
     refs: {
         [key: string]: ReactInstance;
         display: MarkDownContent;
-        codeMirror: ReactCodeMirror;
+        codeMirror: any;        // actually is ReactCodeMirror
     };
 
     constructor(props: Props) {

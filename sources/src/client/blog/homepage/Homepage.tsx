@@ -18,17 +18,18 @@
 
 import * as React from "react";
 import * as ReactDOM from "react-dom";
+import RenderEngines from "../../render/RenderEngines";
 
-import PostList from "../post/PostList";
-import BannerFrame from "../common/BannerFrame";
+
+declare var pageData: any;
+
 
 export class Homepage extends React.Component<any, any> {
 
     render() {
+        let HomeRender = RenderEngines.getRender(pageData.render).homepage;
         return (
-            <BannerFrame changeTitle={true}>
-                <PostList />
-            </BannerFrame>
+            <HomeRender />
         );
     }
 }

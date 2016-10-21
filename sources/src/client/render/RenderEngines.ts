@@ -16,26 +16,27 @@
  * limitations under the License.
  */
 
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-
-import BannerFrame from "../common/BannerFrame";
+import {BlogRender} from "./BlogRender";
+import DefHomepageRender from "./default/homepage/DefHomepageRender";
 
 
-export default class AboutAuthor extends React.Component<any, any> {
+export default class RenderEngines {
 
-    render() {
-        return (
-            <BannerFrame>
-                <h1>
-                    关于作者
-                </h1>
-            </BannerFrame>
-        );
+    static defRender: BlogRender = {
+        name: 'default',
+        homepage: DefHomepageRender
+    };
+
+/*
+    static simpleRender: BlogRender = {
+        name: 'simple'
+    };*/
+
+    static getRender(name: string): BlogRender {
+        if (name === RenderEngines.defRender.name) {
+            return RenderEngines.defRender;
+        }
+
+        return RenderEngines.defRender;
     }
 }
-
-
-ReactDOM.render(
-    <AboutAuthor />,
-    document.getElementById('react-content'));

@@ -16,28 +16,19 @@
  * limitations under the License.
  */
 
-export var config = {
-    db: {
-        host: 'localhost',
-        port: 27017,
-        database_name: 'phoenix_blog'
-    },
+import * as React from 'react';
 
-    user: {
-        userName: 'phoenix blog',
-        email: 'zyfgood12@163.com',
-        portrait: '/default_portrait.png'
-    },
+import BannerFrame from "../common/BannerFrame";
+import PostList from "../../../blog/post/PostList";
 
-    site: {
-        siteTitle: 'Phoenix Blog',
-        subTitle: 'github.com@phoenix_blog',
-    },
 
-    render: 'default',
+export default class DefHomepageRender extends React.Component<any, any> {
 
-    admin: {
-        name: 'admin',
-        password: '123456'
+    render() {
+        return (
+            <BannerFrame changeTitle={true}>
+                <PostList />
+            </BannerFrame>
+        );
     }
-};
+}

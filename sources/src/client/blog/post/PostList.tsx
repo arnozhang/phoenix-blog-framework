@@ -22,7 +22,7 @@ import MiscUtils from "../../base/utils/MiscUtils";
 
 import PostPreview from "./PostPreview";
 import PageIndexes from "../homepage/PageIndexes";
-import TitleHeader from "../common/TitleHeader";
+import TitleHeader from "../../render/default/common/TitleHeader";
 
 const cssStyles = require('../homepage/homepage.css');
 

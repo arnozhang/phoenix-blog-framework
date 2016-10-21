@@ -7,7 +7,6 @@ module.exports = {
     entry: {
         'client/404': './src/client/blog/errors/404.tsx',
         'client/homepage': './src/client/blog/homepage/Homepage.tsx',
-        'client/about_author': './src/client/blog/misc/AboutAuthor.tsx',
         'client/post': './src/client/blog/post/PostDetail.tsx',
         'client/category_post': './src/client/blog/post/CategoryPost.tsx',
         'client/timeline_post': './src/client/blog/post/TimelinePost.tsx',

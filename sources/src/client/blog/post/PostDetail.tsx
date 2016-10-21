@@ -27,8 +27,8 @@ import PlainLink from "../../base/component/PlainLink";
 import FontAwesome from "../../base/component/FontAwesome";
 import MarkDownContent from "../../base/markdown/MarkDownContent";
 
-import TitleHeader from "../common/TitleHeader";
-import BannerFrame from "../common/BannerFrame";
+import TitleHeader from "../../render/default/common/TitleHeader";
+import BannerFrame from "../../render/default/common/BannerFrame";
 
 const cssStyles = require('../homepage/homepage.css');
 

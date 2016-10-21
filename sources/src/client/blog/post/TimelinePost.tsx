@@ -22,8 +22,8 @@ import * as $ from "jquery";
 
 import PlainLink from "../../base/component/PlainLink";
 
-import TitleHeader from "../common/TitleHeader";
-import BannerFrame from "../common/BannerFrame";
+import TitleHeader from "../../render/default/common/TitleHeader";
+import BannerFrame from "../../render/default/common/BannerFrame";
 
 
 export default class PostTimeline extends React.Component<any, any> {

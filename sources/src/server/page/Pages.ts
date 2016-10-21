@@ -17,7 +17,6 @@
  */
 
 import {Request, Response} from "express";
-
 import {ReqRouter} from "../cgis/CgiBase";
 import CgiHelper from "../cgis/CgiHelper";
 import {config} from "../config/server.config";
@@ -28,82 +27,88 @@ export function clientPagesRouter() {
 
         @ReqRouter.RouteCgi('/')
         static homepage(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: config.site.siteTitle,
-                js: [CgiHelper.pageJs('homepage')]
-            });
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                config.site.siteTitle,
+                'homepage'
+            );
         }
 
         @ReqRouter.RouteCgi('/post/:postId')
         static postDetail(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: '文章详情',
-                js: [CgiHelper.pageJs('post')],
-                data: {
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                '文章详情',
+                'post',
+                {
                     postId: req.params.postId
                 }
-            });
+            );
         }
 
         @ReqRouter.RouteCgi('/category_post/:categoryId')
         static categoryPosts(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: '分类列表',
-                js: [CgiHelper.pageJs('category_post')],
-                data: {
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                '分类列表',
+                'category_post',
+                {
                     categoryId: req.params.categoryId
                 }
-            });
+            );
         }
 
         @ReqRouter.RouteCgi('/timeline_list')
         static timelinePosts(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: '时间轴列表',
-                js: [CgiHelper.pageJs('timeline_post')],
-                data: {
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                '时间轴列表',
+                'timeline_post',
+                {
                     categoryId: req.params.categoryId
                 }
-            });
+            );
         }
 
         @ReqRouter.RouteCgi('/timeline_post_detail/:year/:month')
         static timelinePostsDetail(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: `时间轴列表 - ${req.params.year}年${req.params.month}月`,
-                js: [CgiHelper.pageJs('timeline_post_detail')],
-                data: {
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                `时间轴列表 - ${req.params.year}年${req.params.month}月`,
+                'timeline_post_detail',
+                {
                     year: req.params.year,
                     month: req.params.month
                 }
-            });
-        }
-
-        @ReqRouter.RouteCgi('/about_author')
-        static aboutAuthor(req: Request, rsp: Response) {
-            rsp.render('normal.pug', {
-                title: '关于作者',
-                js: [CgiHelper.pageJs('about_author')]
-            });
+            );
         }
 
         @ReqRouter.RouteCgi('/tag_posts/:tagName')
         static tagPosts(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: '分类列表',
-                js: [CgiHelper.pageJs('tag_post')],
-                data: {
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                '分类列表',
+                'tag_post',
+                {
                     tagName: req.params.tagName
                 }
-            });
+            );
         }
 
         @ReqRouter.RouteCgi('/tag_list')
         static tagList(req: Request, rsp: Response) {
-            rsp.render('normal.pug', {
-                title: '标签列表',
-                js: [CgiHelper.pageJs('tag_detail_list')]
-            });
+            CgiHelper.render(
+                rsp,
+                'normal.pug',
+                '标签列表',
+                'tag_detail_list'
+            );
         }
     }
 }
@@ -114,45 +119,55 @@ export function adminPagesRouter() {
 
         @ReqRouter.AdminRouteCgi('/admin')
         static adminIndex(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: '后台管理系统',
-                js: [CgiHelper.pageJs('admin_index')]
-            });
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                '后台管理系统',
+                'admin_index'
+            );
         }
 
         @ReqRouter.AdminRouteCgi('/category_manager')
         static categoryManager(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: '分类管理',
-                js: [CgiHelper.pageJs('category_manager')]
-            });
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                '分类管理',
+                'category_manager'
+            );
         }
 
         @ReqRouter.AdminRouteCgi('/comment_manager')
         static commentManager(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: '评论管理',
-                js: [CgiHelper.pageJs('comment_manager')]
-            });
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                '评论管理',
+                'comment_manager'
+            );
         }
 
         @ReqRouter.AdminRouteCgi('/write_new_post')
         static writeNewPost(req: Request, rsp: Response) {
-            rsp.render('write-new-post.pug', {
-                title: '写新文章',
-                js: [CgiHelper.pageJs('write_new_post')]
-            });
+            CgiHelper.render(
+                rsp,
+                'write-new-post.pug',
+                '写新文章',
+                'write_new_post'
+            );
         }
 
         @ReqRouter.AdminRouteCgi('/admin_category_post/:categoryId')
         static adminCategoryPost(req: Request, rsp: Response) {
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: '分类列表',
-                js: [CgiHelper.pageJs('admin_category_post')],
-                data: {
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                '分类列表',
+                'admin_category_post',
+                {
                     categoryId: req.params.categoryId
                 }
-            });
+            );
         }
     }
 }
@@ -165,10 +180,12 @@ export function errorPagesRouter() {
         static error404(req: Request, rsp: Response) {
             console.log(`** No Route for ${req.url}`);
 
-            rsp.render('with-scrollbar-markdown.pug', {
-                title: '404!',
-                js: [CgiHelper.pageJs('404')]
-            });
+            CgiHelper.render(
+                rsp,
+                'with-scrollbar-markdown.pug',
+                '404!',
+                '404'
+            );
         }
     }
 }

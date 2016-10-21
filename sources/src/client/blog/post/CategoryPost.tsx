@@ -22,7 +22,7 @@ import * as ReactDOM from "react-dom";
 
 import {RetCodes} from "../../../base/RetCodes";
 
-import BannerFrame from "../common/BannerFrame";
+import BannerFrame from "../../render/default/common/BannerFrame";
 import PostList from "./PostList";
 
 

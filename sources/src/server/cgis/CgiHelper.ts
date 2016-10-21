@@ -17,9 +17,11 @@
  */
 
 import {Request, Response} from "express";
+import * as assign from "lodash/assign";
 
 import {RetCodes} from "../../base/RetCodes";
 
+import {config} from "../config/server.config";
 import {FileUploader} from "../upload/FileUploader";
 import LocalSaveFileUploader from "../upload/LocalSaveFileUploader";
 
@@ -56,6 +58,22 @@ export default class CgiHelper {
 
     static pageJs(name: string): string {
         return `/${name}.js`;
+    }
+
+    static pageData(data: any): any {
+        let result = {
+            render: config.render
+        };
+
+        return assign(result, data);
+    }
+
+    static render(rsp: Response, template: string, title: string, js: string, data?: any) {
+        rsp.render(template, {
+            title: title,
+            js: [CgiHelper.pageJs(js)],
+            data: CgiHelper.pageData(data)
+        });
     }
 
     static notifySuccess(rsp: Response) {

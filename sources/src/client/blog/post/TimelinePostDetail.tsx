@@ -20,7 +20,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 
 import PostList from "./PostList";
-import BannerFrame from "../common/BannerFrame";
+import BannerFrame from "../../render/default/common/BannerFrame";
 
 
 declare var pageData: any;

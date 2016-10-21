@@ -23,8 +23,8 @@ import *as $ from "jquery";
 import {RetCodes} from "../../../base/RetCodes";
 import PlainLink from "../../base/component/PlainLink";
 
-import BannerFrame from "../common/BannerFrame";
-import TitleHeader from "../common/TitleHeader";
+import BannerFrame from "../../render/default/common/BannerFrame";
+import TitleHeader from "../../render/default/common/TitleHeader";
 
 const cssStyles = require('../homepage/homepage.css');
 
