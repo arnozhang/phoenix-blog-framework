@@ -17,11 +17,9 @@
  */
 
 import {Request, Response} from "express";
-import * as mongoose from "mongoose";
-import * as path from "path";
-import * as fs from "fs";
 
 import {RetCodes} from "../../base/RetCodes";
+
 import CgiHelper from "./CgiHelper";
 import {ReqRouter, RouteType} from "./CgiBase";
 
@@ -45,13 +43,7 @@ export function fileUploadRouter() {
                     return;
                 }
 
-                let tempPath = path.join('dist', 'files', 'temp');
-                if (!fs.existsSync(tempPath)) {
-                    fs.mkdirSync(tempPath);
-                }
-
-                let fileName = new mongoose.Types.ObjectId().toHexString();
-                fs.writeFile(`${tempPath}/${fileName}`, blob.data, (err: any) => {
+                CgiHelper.uploader.upload(blob, (err: any, url: string) => {
                     if (err) {
                         CgiHelper.notifyError(rsp, err);
                         return;
@@ -59,7 +51,7 @@ export function fileUploadRouter() {
 
                     rsp.json({
                         ret: RetCodes.OK,
-                        url: `/upload_images/${fileName}`
+                        url: url
                     });
                 });
             });

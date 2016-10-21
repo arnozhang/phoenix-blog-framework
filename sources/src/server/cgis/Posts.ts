@@ -17,13 +17,10 @@
  */
 
 import {Request, Response} from "express";
-import * as fs from "fs";
-import * as child_process from "child_process";
 import * as mongoose from "mongoose";
-import * as os from "os";
-import * as path from "path";
 
 import {RetCodes} from "../../base/RetCodes";
+
 import {RouteType, ReqRouter} from "./CgiBase";
 import {PostModel} from "../data/BlogModules";
 import CgiHelper from "./CgiHelper";
@@ -248,16 +245,7 @@ export function postRouter() {
                     return;
                 }
 
-                let imagePath = path.join('dist', 'files', 'image', req.params.postId);
-                if (fs.existsSync(imagePath)) {
-                    let cmd = os.platform() === 'win32'
-                        ? `RD /S /Q ${imagePath}`
-                        : `rm -rf ${imagePath}`;
-                    child_process.exec(cmd, (err: Error) => {
-                        console.log(err);
-                    });
-                }
-
+                CgiHelper.uploader.removeFilesByPostId(req.params.postId);
                 CgiHelper.notifySuccess(rsp);
             });
         }
@@ -340,7 +328,8 @@ export function postRouter() {
             let postId = post._id;
             if (post.content) {
                 if (!postId || postId.length <= 0) {
-                    postId = new mongoose.Types.ObjectId().toHexString();
+                    let id: any = new mongoose.Types.ObjectId();
+                    postId = id.toHexString();
                 }
 
                 _.handlePostTempImage(postId, post);
@@ -389,33 +378,10 @@ export function postRouter() {
                     continue;
                 }
 
-                _.moveImageFile(postId, match[2]);
+                CgiHelper.uploader.moveImageFile(postId, match[2]);
                 post.content = post.content.replace(
                     item, `![${match[1]}](/images/${postId}/${match[2]})]`);
             }
-        }
-
-        static moveImageFile(postId: string, fileName: string): string {
-            let src = path.join('dist', 'files', 'temp', fileName);
-            if (!fs.existsSync(src)) {
-                return null;
-            }
-
-            let dstPath = path.join('dist', 'files', 'image', postId);
-            let dst = path.join(dstPath, fileName);
-
-            if (!fs.existsSync(dstPath)) {
-                fs.mkdirSync(dstPath);
-            }
-
-            let move = os.platform() === 'win32' ? 'move' : 'mv';
-            child_process.exec(`${move} ${src} ${dst}`, (err: Error) => {
-                if (err) {
-                    console.log(err);
-                }
-            });
-
-            return `/images/${postId}/${fileName}`;
         }
     }
 }

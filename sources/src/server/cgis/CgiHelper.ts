@@ -20,6 +20,8 @@ import {Request, Response} from "express";
 
 import {RetCodes} from "../../base/RetCodes";
 
+import LocalSaveFileUploader from "../upload/LocalSaveFileUploader";
+
 
 export default class CgiHelper {
 
@@ -89,4 +91,7 @@ export default class CgiHelper {
             data: new Buffer(match[2], 'base64')
         };
     }
+
+    static uploader = new LocalSaveFileUploader();
+
 }
