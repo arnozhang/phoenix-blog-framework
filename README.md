@@ -125,7 +125,7 @@ node ./dist/build/server/index.js
 第二种是正式部署时，这时候我们可以用 `forever` 这个 npm 包，来让博客永久运行：
 
 ```
-sudo forever start ./dist/build/server/index.js
+forever start ./dist/build/server/index.js
 ```
 
 **需要注意的是，在 Linux 环境下，当启动 80 端口时，需要 sudo 权限。**
