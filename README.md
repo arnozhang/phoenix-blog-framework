@@ -18,7 +18,7 @@
 `phoenix-blog-framework` 的特点：
 
 - 前后台均采用 Typescript 编写，管理方便；
-- 拥有强大的后台管理系统，以及博客写作系统；
+- 拥有强大的后台管理系统，以及 Markdown 博客写作系统；
 - 部署方便；
 - 博客采用 Markdown 存放；
 - 可自由添加实现渲染模板，可定制页面展示。
@@ -46,7 +46,7 @@ export var config = {
         subTitle: 'github.com@phoenix_blog',
     },
 
-	// render engine.
+    // render engine.
     render: 'default',
 
     admin: {
@@ -73,7 +73,7 @@ npm install --global webpack
 #### 3.2、拉取代码
 
 ```
-git clone git clone https://github.com/arnozhang/phoenix-blog-framework
+git clone https://github.com/arnozhang/phoenix-blog-framework
 ```
 
 #### 3.3、安装依赖包
@@ -125,7 +125,19 @@ node ./dist/build/server/index.js
 第二种是正式部署时，这时候我们可以用 `forever` 这个 npm 包，来让博客永久运行：
 
 ```
-sudo forever start ./dist/build/server/index.js
+forever start ./dist/build/server/index.js
 ```
 
 **需要注意的是，在 Linux 环境下，当启动 80 端口时，需要 sudo 权限。**
+
+#### 4.4、打开博客
+
+打开博客首页：[http://localhost](http://localhost)
+
+打开博客后台管理页面：[http://localhost/admin](http://localhost/admin)
+
+打开博客写作页面：[http://localhost/write_new_post](http://localhost/write_new_post)
+
+博客写作、后台管理页面均需要输入管理员帐号和密码——亦即在 `server.config.js` 文件中配置的帐号和密码。
+
+
