@@ -6,7 +6,7 @@
 
 **`phoenix-blog-framework`** 是一款个人博客框架。比如我的个人博客，就是采用这个框架完成的：[http://arnozhang.com/](http://arnozhang.com/)
 
-![博客截图]()
+![博客截图](https://github.com/arnozhang/phoenix-blog-framework/blob/master/docs/arnozhang-blog.png?raw=true)
 
 前后台均采用 Typescript 编写。各模块采用技术如下：
 
