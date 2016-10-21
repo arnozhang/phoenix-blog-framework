@@ -31,7 +31,7 @@ import BannerFrame from "../common/BannerFrame";
 
 import {PostDetailRender, PostDetailProps} from "../../BlogRender";
 
-const cssStyles = require('../styles.css');
+const cssStyles = require('../default-styles.css');
 
 
 declare var pageData: any;

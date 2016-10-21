@@ -20,7 +20,7 @@ import * as React from "react";
 import PlainLink from "../../base/component/PlainLink";
 import PageIndexesRender, {PageIndexesProps} from "../BlogRender";
 
-const cssStyles = require('./common.css');
+const cssStyles = require('./common-render.css');
 
 
 export default class CommonPageIndexesRender extends PageIndexesRender<PageIndexesProps, any> {

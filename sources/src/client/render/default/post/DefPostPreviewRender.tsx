@@ -26,7 +26,7 @@ import MarkDownContent from "../../../base/markdown/MarkDownContent";
 
 import {PostPreviewRender, PostPreviewProps} from "../../BlogRender";
 
-const cssStyles = require('../styles.css');
+const cssStyles = require('../default-styles.css');
 
 
 export default class DefPostPreviewRender extends PostPreviewRender<PostPreviewProps, any> {
