@@ -20,8 +20,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import * as $ from "jquery";
 
-import PostList from "./PostList";
-import BannerFrame from "../../render/default/common/BannerFrame";
+import RenderEngines from "../../render/RenderEngines";
 
 
 declare var pageData: any;
@@ -39,14 +38,11 @@ export default class TagPost extends React.Component<any, any> {
     }
 
     render() {
+        let TagPostRender_ = RenderEngines.getRender(pageData.render).tagPostList;
         return (
-            <BannerFrame>
-                <PostList
-                    ref='postList'
-                    title={pageData.tagName}
-                    pageJumpIndex={`/tag_posts/${pageData.tagName}`}
-                    fetcher={this.postListFetcher.bind(this)}/>
-            </BannerFrame>
+            <TagPostRender_
+                tagName={pageData.tagName}
+                fetcher={this.postListFetcher.bind(this)}/>
         );
     }
 }

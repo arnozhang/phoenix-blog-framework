@@ -84,6 +84,17 @@ export class TagDetailListRender<P extends TagDetailListProps, S> extends React.
 }
 
 
+//
+// Tag post list render.
+//
+export interface TagPostListProps {
+    tagName: string;
+    fetcher: PostListFetcher;
+}
+
+export class TagPostListRender<P extends TagPostListProps, S> extends React.Component<P, S> {
+}
+
 
 export interface BlogRender {
 
@@ -96,4 +107,5 @@ export interface BlogRender {
     postDetail: any;
     categoryPost: any;
     tagDetailList: any;
+    tagPostList: any;
 }
