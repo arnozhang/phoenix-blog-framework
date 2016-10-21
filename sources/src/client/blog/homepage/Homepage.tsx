@@ -27,9 +27,9 @@ declare var pageData: any;
 export class Homepage extends React.Component<any, any> {
 
     render() {
-        let HomeRender = RenderEngines.getRender(pageData.render).homepage;
+        let HomepageRender_ = RenderEngines.getRender(pageData.render).homepage;
         return (
-            <HomeRender />
+            <HomepageRender_ />
         );
     }
 }

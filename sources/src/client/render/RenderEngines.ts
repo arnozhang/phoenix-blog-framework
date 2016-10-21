@@ -20,6 +20,7 @@ import {BlogRender} from "./BlogRender";
 import DefHomepageRender from "./default/homepage/DefHomepageRender";
 import DefPostPreviewRender from "./default/post/DefPostPreviewRender";
 import DefCategoryPostRender from "./default/post/DefCategoryPostRender";
+import {DefPostDetailRender} from "./default/post/DefPostDetailRender";
 
 
 export default class RenderEngines {
@@ -28,6 +29,7 @@ export default class RenderEngines {
         name: 'default',
         homepage: DefHomepageRender,
         postPreview: DefPostPreviewRender,
+        postDetail: DefPostDetailRender,
         categoryPost: DefCategoryPostRender
     };
 

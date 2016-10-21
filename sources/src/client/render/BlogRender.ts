@@ -41,6 +41,16 @@ export class CategoryPostRender<P extends CategoryPostProps, S> extends React.Co
 }
 
 
+export interface PostDetailProps {
+    post: any;
+    loading: boolean;
+    praisePost: () => void;
+}
+
+export class PostDetailRender<P extends PostDetailProps, S> extends React.Component<P, S> {
+}
+
+
 export interface BlogRender {
 
     name: string;
@@ -48,5 +58,6 @@ export interface BlogRender {
     homepage: any;
     _404?: any;
     postPreview: any;
+    postDetail: any;
     categoryPost: any;
 }

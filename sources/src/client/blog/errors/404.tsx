@@ -29,10 +29,10 @@ declare var pageData: any;
 export class Error404Page extends React.Component<any, any> {
 
     render() {
-        let Error404Render = RenderEngines.getRender(pageData.render)._404;
-        if (Error404Render) {
+        let Error404Render_ = RenderEngines.getRender(pageData.render)._404;
+        if (Error404Render_) {
             return (
-                <Error404Render />
+                <Error404Render_ />
             );
         }
 
