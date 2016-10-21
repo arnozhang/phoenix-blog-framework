@@ -1,7 +1,5 @@
 # phoenix-blog-framework 文档
 
-@(Technical)[phoenix-blog|Typescript|Node.js]
-
 ### 1、简介
 
 **`phoenix-blog-framework`** 是一款个人博客框架。比如我的个人博客，就是采用这个框架完成的：[http://arnozhang.com/](http://arnozhang.com/)
@@ -129,3 +127,5 @@ node ./dist/build/server/index.js
 ```
 sudo forever start ./dist/build/server/index.js
 ```
+
+需要注意的是，在 Linux 环境下，当启动 80 端口时，需要 sudo 权限。
