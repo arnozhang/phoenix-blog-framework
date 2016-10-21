@@ -28,9 +28,12 @@ import {FileUploader} from "./FileUploader";
 import CgiHelper from "../cgis/CgiHelper";
 
 
-export default class LocalSaveFileUploader extends FileUploader {
+export default class LocalSaveFileUploader implements FileUploader {
 
-    upload(blob: any, callback: (err: any, url: string) => void) {
+    constructor() {
+    }
+
+    upload(blob: any, callback: (err: any, url: string) => void) : void {
         let tempPath = path.join('dist', 'files', 'temp');
         if (!fs.existsSync(tempPath)) {
             fs.mkdirSync(tempPath);
@@ -71,7 +74,7 @@ export default class LocalSaveFileUploader extends FileUploader {
         return `/images/${postId}/${fileName}`;
     }
 
-    removeFilesByPostId(postId: string) {
+    removeFilesByPostId(postId: string) : void {
         let imagePath = path.join('dist', 'files', 'image', postId);
         if (fs.existsSync(imagePath)) {
             let cmd = os.platform() === 'win32'

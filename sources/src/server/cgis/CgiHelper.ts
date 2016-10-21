@@ -93,5 +93,4 @@ export default class CgiHelper {
     }
 
     static uploader = new LocalSaveFileUploader();
-
 }

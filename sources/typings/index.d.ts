@@ -10,6 +10,7 @@
 /// <reference path="globals/mongodb/index.d.ts" />
 /// <reference path="globals/mongoose/index.d.ts" />
 /// <reference path="globals/node/index.d.ts" />
+/// <reference path="globals/pug/index.d.ts" />
 /// <reference path="globals/react-codemirror/index.d.ts" />
 /// <reference path="globals/react-css-modules/index.d.ts" />
 /// <reference path="globals/react-dom/index.d.ts" />

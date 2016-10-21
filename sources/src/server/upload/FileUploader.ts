@@ -18,9 +18,9 @@
 
 export interface FileUploader {
 
-    upload(blob: any, callback: (err: any, url: string) => void);
+    upload(blob: any, callback: (err: any, url: string) => void) : void;
 
     moveImageFile(postId: string, fileName: string): string;
 
-    removeFilesByPostId(postId: string);
+    removeFilesByPostId(postId: string) : void;
 }

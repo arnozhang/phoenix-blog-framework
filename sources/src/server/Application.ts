@@ -18,7 +18,7 @@
 
 import * as express from "express";
 import * as bodyParser from "body-parser";
-import * as jade from "jade";
+import * as pug from "pug";
 
 
 export var app = express();
@@ -26,11 +26,11 @@ export var app = express();
 
 function configurationViewEngine() {
     app.set('views', 'dist/res/views');
-    app.engine('jade', (path: string, options: any, fn?: any) => {
+    app.engine('pug', (path: string, options: any, fn?: any) => {
         options.pretty = true;
-        return jade.renderFile(path, options, fn);
+        return pug.renderFile(path, options, fn);
     });
-    app.set('view engine', 'jade');
+    app.set('view engine', 'pug');
 }
 
 

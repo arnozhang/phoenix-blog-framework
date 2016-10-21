@@ -26,6 +26,7 @@
     "lodash": "^4.15.0",
     "mongodb": "^2.2.9",
     "mongoose": "^4.5.10",
+    "pug": "^2.0.0-beta6",
     "react": "^15.3.1",
     "react-codemirror": "^0.2.6",
     "react-dom": "^15.3.1",
