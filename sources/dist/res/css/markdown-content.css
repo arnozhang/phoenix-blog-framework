@@ -1,0 +1,94 @@
+body {
+    font-family: "Microsoft YaHei", "lucida grande", "lucida sans unicode", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
+    line-height: 1.6;
+    color: #2c3f51;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #2c3f51;
+}
+
+li {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+blockquote {
+    background-color: rgba(102, 128, 153, 0.05);
+    margin: 0;
+    padding: 10px 15px 10px 15px;
+    border-left: solid 8px #d9e8f7;
+    color: #444;
+}
+
+blockquote > p {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+pre {
+    overflow: auto;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+}
+
+pre > code {
+    background: none;
+    border: none;
+}
+
+code {
+    background: #fbebf1;
+    border: solid 1px #fbcbee;
+    padding: 0 5px 1px 5px;
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+hr {
+    border-color: rgba(102, 128, 153, 0.2);
+    border-top-width: 1px;
+    border-bottom-width: 0;
+}
+
+a {
+    color: #1980e6;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #EC407A;
+    text-decoration: underline;
+}
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 30px;
+}
+
+thead {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    border-left: none;
+    background: #f0f0f0;
+}
+
+th {
+    border: 1px solid #ccc;
+    padding: 10px 20px;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 8px 20px;
+}
+
+td img {
+    width: 100%;
+}

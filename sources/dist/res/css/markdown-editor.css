@@ -1,0 +1,60 @@
+@import "markdown-content.css";
+
+.CodeMirror {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    font-size: 16px;
+}
+
+.CodeMirror-lines {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+    margin: 10px;
+}
+
+.CodeMirror pre {
+    padding-left: 15px;
+}
+
+.CodeMirror-gutter-wrapper {
+    left: -40px;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+    background-color: #4DB6AC;
+    border-radius: 8px;
+}
+
+.CodeMirror-hscrollbar::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.CodeMirror-hscrollbar::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+.CodeMirror-hscrollbar::-webkit-scrollbar-thumb {
+    background-color: #4DB6AC;
+    border-radius: 8px;
+}
+
+.editor-panel textarea {
+    height: 100%;
+}

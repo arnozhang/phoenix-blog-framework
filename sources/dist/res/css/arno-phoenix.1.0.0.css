@@ -1,0 +1,109 @@
+/**
+ * CSS for CodeMirror.
+ */
+
+.cm-s-arno-phoenix.CodeMirror {
+    background: white;
+    color: #2c3f51;
+}
+
+.cm-s-arno-phoenix div.CodeMirror-selected {
+    background: #9CCC65 !important;
+}
+
+.cm-s-arno-phoenix.CodeMirror ::selection {
+    background: rgba(73, 72, 62, .99);
+}
+
+.cm-s-arno-phoenix.CodeMirror ::-moz-selection {
+    background: rgba(73, 72, 62, .99);
+}
+
+.cm-s-arno-phoenix .CodeMirror-gutters {
+    background: #C5CAE9;
+    border-right: 0;
+}
+
+.cm-s-arno-phoenix .CodeMirror-guttermarker {
+    color: #0079ff;
+}
+
+.cm-s-arno-phoenix .CodeMirror-guttermarker-subtle {
+    color: #d0d0d0;
+}
+
+.cm-s-arno-phoenix .CodeMirror-linenumber {
+    height: 100%;
+    padding-right: 5px;
+    color: #43657a;
+    font-size: 13px;
+    background-color: #C5CAE9;
+}
+
+.cm-s-arno-phoenix .CodeMirror-cursor {
+    border-left: 1px solid #F50057 !important;
+}
+
+.cm-s-arno-phoenix span.cm-comment {
+    color: #546E7A;
+    background-color: #f8EBEE;
+}
+
+.cm-s-arno-phoenix span.cm-atom {
+    color: #ae81ff;
+}
+
+.cm-s-arno-phoenix span.cm-number {
+    color: #ae81ff;
+}
+
+.cm-s-arno-phoenix span.cm-property, .cm-s-arno-phoenix span.cm-attribute {
+    color: #a6e22e;
+}
+
+.cm-s-arno-phoenix span.cm-keyword {
+    color: #f92672;
+}
+
+.cm-s-arno-phoenix span.cm-string {
+    color: #2196F3;
+}
+
+.cm-s-arno-phoenix span.cm-variable {
+    color: red;
+}
+
+.cm-s-arno-phoenix span.cm-variable-2 {
+    color: #009688;
+}
+
+.cm-s-arno-phoenix span.cm-def {
+    color: #fd971f;
+}
+
+.cm-s-arno-phoenix span.cm-bracket {
+    color: red;
+}
+
+.cm-s-arno-phoenix span.cm-tag {
+    color: #f92672;
+}
+
+.cm-s-arno-phoenix span.cm-link {
+    font-weight: bold;
+    color: #EC407A;
+}
+
+.cm-s-arno-phoenix span.cm-error {
+    background: #f92672;
+    color: #f8f8f0;
+}
+
+.cm-s-arno-phoenix .CodeMirror-activeline-background {
+    background: #373831 !important;
+}
+
+.cm-s-arno-phoenix .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}

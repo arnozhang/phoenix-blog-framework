@@ -1,0 +1,36 @@
+{
+  "name": "phoenix_blog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/build/server/index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "arnozhang",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "css-loader": "^0.24.0",
+    "forever": "^0.15.2",
+    "jade": "^1.11.0",
+    "json-loader": "^0.5.4",
+    "source-map-loader": "^0.1.5",
+    "ts-loader": "^0.8.2",
+    "style-loader": "^0.13.1"
+  },
+  "dependencies": {
+    "basic-auth": "^1.0.4",
+    "body-parser": "^1.15.2",
+    "codemirror": "^5.18.2",
+    "express": "^4.14.0",
+    "jquery": "^3.1.0",
+    "lodash": "^4.15.0",
+    "mongodb": "^2.2.9",
+    "mongoose": "^4.5.10",
+    "react": "^15.3.1",
+    "react-codemirror": "^0.2.6",
+    "react-dom": "^15.3.1",
+    "react-fontawesome": "^1.1.0",
+    "remarkable": "^1.6.2",
+    "webpack": "^1.13.2"
+  }
+}

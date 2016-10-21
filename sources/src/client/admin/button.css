@@ -1,0 +1,39 @@
+.baseButton {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 10px 20px 10px 20px;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+}
+
+.baseButton:active {
+    transform: translateY(1px);
+}
+
+.blueButton {
+    composes: baseButton;
+    background-color: #29B6F6;
+}
+
+.blueButton:hover {
+    background-color: #03A9F4;
+}
+
+.blueButton:active {
+    background-color: #039BE5;
+}
+
+.redButton {
+    composes: baseButton;
+    background-color: #E57373;
+}
+
+.redButton:hover {
+    background-color: #EF5350;
+}
+
+.redButton:active {
+    background-color: #F44336;
+}

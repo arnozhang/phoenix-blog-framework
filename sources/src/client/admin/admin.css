@@ -1,0 +1,57 @@
+.adminTab {
+    padding: 10px 20px;
+    margin-right: 20px;
+    background-color: #FBE9E7;
+    cursor: pointer;
+    border: solid 1px #FF8A65;
+    border-radius: 10px;
+    font-size: 13px;
+}
+
+.adminTab:hover {
+    background-color: #FFCCBC;
+}
+
+.adminTab:active {
+    background-color: #FFAB91;
+}
+
+.adminTabSelected {
+    composes: adminTab;
+    background-color: #FF7043;
+}
+
+.categoryItemBase {
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.categoryItem {
+    composes: categoryItemBase;
+    border: solid 1px #03A9F4;
+    background-color: #E1F5FE;
+}
+
+.categoryItem:hover {
+    background-color: #B3E5FC;
+}
+
+.categoryItem:active {
+    background-color: #81D4FA;
+}
+
+.categoryUnSelectItem {
+    composes: categoryItemBase;
+    border: dashed 1px #EF9A9A;
+    background-color: #ECEFF1;
+}
+
+.categoryUnSelectItem:hover {
+    background-color: #CFD8DC;
+}
+
+.categoryUnSelectItem:active {
+    background-color: #B0BEC5;
+}

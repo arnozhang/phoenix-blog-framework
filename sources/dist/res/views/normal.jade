@@ -1,0 +1,28 @@
+doctype html
+
+html
+    head
+        meta(charset='utf-8')
+        meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+        title=title
+
+        link(rel='stylesheet', href='/css/global.css')
+        link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css')
+        block styles
+
+    body
+        div#react-content
+
+        script(src='http://cdn.bootcss.com/react/15.3.1/react.min.js')
+        script(src='http://cdn.bootcss.com/react/15.3.1/react-dom.js')
+        script(src='http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js')
+
+        block scripts
+
+        - if (data)
+            script.
+                var pageData = !{JSON.stringify(data)};
+
+        each name in js
+            script(src=name)
+

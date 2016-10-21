@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/b7cce90002934d301bc018cea8aadc3743d87500/react-css-modules/react-css-modules.d.ts",
+    "raw": "registry:dt/react-css-modules#3.7.9+20160805170511",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/b7cce90002934d301bc018cea8aadc3743d87500/react-css-modules/react-css-modules.d.ts"
+  }
+}

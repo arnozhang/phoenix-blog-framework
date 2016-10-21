@@ -1,0 +1,7 @@
+a.plain-link {
+    text-decoration: none;
+}
+
+a.plain-link:hover {
+    text-decoration: none;
+}
