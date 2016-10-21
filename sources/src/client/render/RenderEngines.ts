@@ -64,6 +64,8 @@ export default class RenderEngines {
     static getRenderByName(name: string): BlogRender {
         if (name === RenderEngines.defRender.name) {
             return RenderEngines.defRender;
+        } else if (name == RenderEngines.simpleRender.name) {
+            return RenderEngines.simpleRender;
         }
 
         return RenderEngines.defRender;
