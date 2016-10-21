@@ -23,9 +23,6 @@ import * as $ from "jquery";
 import RenderEngines from "../../render/RenderEngines";
 
 
-declare var pageData: any;
-
-
 export default class PostTimeline extends React.Component<any, any> {
 
     list: any[] = null;
@@ -39,7 +36,7 @@ export default class PostTimeline extends React.Component<any, any> {
     }
 
     render() {
-        let TimeListRender_ = RenderEngines.getRender(pageData.render).timelineList;
+        let TimeListRender_ = RenderEngines.getRender().timelineList;
         return (
             <TimeListRender_ list={this.list}/>
         );

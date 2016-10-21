@@ -27,6 +27,9 @@ import DefTagPostRender from "./default/post/DefTagPostListRender";
 import DefTimelinePostRender from "./default/post/DefTimelineListRender";
 
 
+declare var pageData: any;
+
+
 export default class RenderEngines {
 
     static defRender: BlogRender = {
@@ -41,17 +44,29 @@ export default class RenderEngines {
         timelineList: DefTimelinePostRender
     };
 
-    /*
-     static simpleRender: BlogRender = {
-     name: 'simple'
-     pageIndexes: CommonPageIndexesRender,
-     };*/
 
-    static getRender(name: string): BlogRender {
+    static simpleRender: BlogRender = {
+        name: 'simple',
+        pageIndexes: CommonPageIndexesRender,
+        homepage: DefHomepageRender,
+        postPreview: DefPostPreviewRender,
+        postDetail: DefPostDetailRender,
+        categoryPost: DefCategoryPostRender,
+        tagDetailList: DefTagDetailListRender,
+        tagPostList: DefTagPostRender,
+        timelineList: DefTimelinePostRender
+    };
+
+
+    static getRenderByName(name: string): BlogRender {
         if (name === RenderEngines.defRender.name) {
             return RenderEngines.defRender;
         }
 
         return RenderEngines.defRender;
+    }
+
+    static getRender(): BlogRender {
+        return RenderEngines.getRenderByName(pageData.render);
     }
 }

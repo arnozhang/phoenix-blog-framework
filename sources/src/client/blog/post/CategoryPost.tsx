@@ -57,7 +57,7 @@ export default class CategoryPost extends React.Component<any, any> {
     }
 
     render() {
-        let CategoryPostRender_ = RenderEngines.getRender(pageData.render).categoryPost;
+        let CategoryPostRender_ = RenderEngines.getRender().categoryPost;
         return (
             <CategoryPostRender_
                 categoryId={pageData.categoryId}

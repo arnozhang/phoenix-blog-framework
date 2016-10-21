@@ -25,9 +25,6 @@ import RenderEngines from "../../render/RenderEngines";
 const cssStyles = require('../homepage/homepage.css');
 
 
-declare var pageData: any;
-
-
 export type PostListFetcher =
     (currentPage: number, count: number, callback: (data: any) => void) => void;
 
@@ -84,7 +81,7 @@ export default class PostList extends React.Component<Props, any> {
 
     render() {
         let posts: any = null;
-        let PostPreviewRender_ = RenderEngines.getRender(pageData.render).postPreview;
+        let PostPreviewRender_ = RenderEngines.getRender().postPreview;
 
         if (this.postList && this.postList.posts && this.postList.posts.length > 0) {
             posts = this.postList.posts.map((post: any, index: number) => {
@@ -107,7 +104,7 @@ export default class PostList extends React.Component<Props, any> {
 
         let postsIndex: any = null;
         if (this.postList && this.postList.pageCount > 1) {
-            let PageIndexesRender_ = RenderEngines.getRender(pageData.render).pageIndexes;
+            let PageIndexesRender_ = RenderEngines.getRender().pageIndexes;
             postsIndex = (
                 <PageIndexesRender_
                     pageJumpIndex={this.props.pageJumpIndex}

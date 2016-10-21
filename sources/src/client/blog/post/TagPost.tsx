@@ -38,7 +38,7 @@ export default class TagPost extends React.Component<any, any> {
     }
 
     render() {
-        let TagPostRender_ = RenderEngines.getRender(pageData.render).tagPostList;
+        let TagPostRender_ = RenderEngines.getRender().tagPostList;
         return (
             <TagPostRender_
                 tagName={pageData.tagName}

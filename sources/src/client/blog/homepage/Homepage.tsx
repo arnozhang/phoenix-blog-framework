@@ -21,13 +21,10 @@ import * as ReactDOM from "react-dom";
 import RenderEngines from "../../render/RenderEngines";
 
 
-declare var pageData: any;
-
-
 export class Homepage extends React.Component<any, any> {
 
     render() {
-        let HomepageRender_ = RenderEngines.getRender(pageData.render).homepage;
+        let HomepageRender_ = RenderEngines.getRender().homepage;
         return (
             <HomepageRender_ />
         );

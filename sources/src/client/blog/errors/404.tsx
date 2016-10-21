@@ -23,13 +23,11 @@ import BlogFooter from "../../base/BlogFooter";
 import FontAwesome from "../../base/component/FontAwesome";
 import RenderEngines from "../../render/RenderEngines";
 
-declare var pageData: any;
-
 
 export class Error404Page extends React.Component<any, any> {
 
     render() {
-        let Error404Render_ = RenderEngines.getRender(pageData.render)._404;
+        let Error404Render_ = RenderEngines.getRender()._404;
         if (Error404Render_) {
             return (
                 <Error404Render_ />

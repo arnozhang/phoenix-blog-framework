@@ -54,7 +54,7 @@ export class PostDetail extends React.Component<any, any> {
     }
 
     render() {
-        let PostDetailRender_ = RenderEngines.getRender(pageData.render).postDetail;
+        let PostDetailRender_ = RenderEngines.getRender().postDetail;
         return (
             <PostDetailRender_
                 post={this.state.post}

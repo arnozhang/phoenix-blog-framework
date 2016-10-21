@@ -25,8 +25,6 @@ import RenderEngines from "../../render/RenderEngines";
 
 const cssStyles = require('../homepage/homepage.css');
 
-declare var pageData: any;
-
 
 export default class TagDetailList extends React.Component<any, any> {
 
@@ -45,7 +43,7 @@ export default class TagDetailList extends React.Component<any, any> {
     }
 
     render() {
-        let TagDetailListRender_ = RenderEngines.getRender(pageData.render).tagDetailList;
+        let TagDetailListRender_ = RenderEngines.getRender().tagDetailList;
         return (
             <TagDetailListRender_ tags={this.tags}/>
         );
