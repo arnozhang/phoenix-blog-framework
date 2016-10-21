@@ -20,15 +20,17 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import *as $ from "jquery";
 
-import {RetCodes} from "../../../base/RetCodes";
-import RenderEngines from "../../render/RenderEngines";
+import {RetCodes} from "../../../../base/RetCodes";
+import PlainLink from "../../../base/component/PlainLink";
 
-const cssStyles = require('../homepage/homepage.css');
+import BannerFrame from "../common/BannerFrame";
+import TitleHeader from "../common/TitleHeader";
+import {TagDetailListRender, TagDetailListProps} from "../../BlogRender";
 
-declare var pageData: any;
+const cssStyles = require('../default-styles.css');
 
 
-export default class TagDetailList extends React.Component<any, any> {
+export default class DefTagDetailListRender extends TagDetailListRender<TagDetailListProps, any> {
 
     tags: any[] = [];
 
@@ -45,9 +47,28 @@ export default class TagDetailList extends React.Component<any, any> {
     }
 
     render() {
-        let TagDetailListRender_ = RenderEngines.getRender(pageData.render).tagDetailList;
         return (
-            <TagDetailListRender_ tags={this.tags}/>
+            <BannerFrame>
+                <div>
+                    <TitleHeader title={'标签列表' + ` (${this.tags.length}个)`}/>
+
+                    <div style={styles.tags_root}>
+                        {
+                            this.tags.map((item: any, index: number) => {
+                                return (
+                                    <PlainLink
+                                        className={cssStyles.postTag} key={index}
+                                        style={styles.tag_item}
+                                        href={`/tag_posts/${item.name}`}>
+                                        {item.name}&nbsp;
+                                        <span style={{color: '#E91E63'}}>({item.count})</span>
+                                    </PlainLink>
+                                );
+                            })
+                        }
+                    </div>
+                </div>
+            </BannerFrame>
         );
     }
 }
@@ -71,8 +92,3 @@ const styles = {
         paddingRight: 20
     }
 };
-
-
-ReactDOM.render(
-    <TagDetailList />,
-    document.getElementById('react-content'));

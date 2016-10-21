@@ -18,7 +18,7 @@
 
 import * as React from "react";
 import PlainLink from "../../base/component/PlainLink";
-import PageIndexesRender, {PageIndexesProps} from "../BlogRender";
+import {PageIndexesRender, PageIndexesProps} from "../BlogRender";
 
 const cssStyles = require('./common-render.css');
 

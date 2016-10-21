@@ -22,6 +22,7 @@ import DefPostPreviewRender from "./default/post/DefPostPreviewRender";
 import DefCategoryPostRender from "./default/post/DefCategoryPostRender";
 import {DefPostDetailRender} from "./default/post/DefPostDetailRender";
 import CommonPageIndexesRender from "./common/CommonPageIndexesRender";
+import DefTagDetailListRender from "./default/post/DefTagDetailListRender";
 
 
 export default class RenderEngines {
@@ -32,7 +33,8 @@ export default class RenderEngines {
         homepage: DefHomepageRender,
         postPreview: DefPostPreviewRender,
         postDetail: DefPostDetailRender,
-        categoryPost: DefCategoryPostRender
+        categoryPost: DefCategoryPostRender,
+        tagDetailList: DefTagDetailListRender,
     };
 
 /*

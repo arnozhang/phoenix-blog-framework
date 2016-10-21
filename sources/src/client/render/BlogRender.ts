@@ -69,8 +69,18 @@ export interface PageIndexesProps {
     pageJumpIndex?: string;
 }
 
+export class PageIndexesRender<P extends PageIndexesProps, S> extends React.Component<P, S> {
+}
 
-export default class PageIndexesRender<P extends PageIndexesProps, S> extends React.Component<P, S> {
+
+//
+// Tag detail list render.
+//
+export interface TagDetailListProps {
+    tags: any[];
+}
+
+export class TagDetailListRender<P extends TagDetailListProps, S> extends React.Component<P, S> {
 }
 
 
@@ -85,4 +95,5 @@ export interface BlogRender {
     postPreview: any;
     postDetail: any;
     categoryPost: any;
+    tagDetailList: any;
 }
