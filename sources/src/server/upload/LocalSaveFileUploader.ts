@@ -30,16 +30,13 @@ import CgiHelper from "../cgis/CgiHelper";
 
 export default class LocalSaveFileUploader implements FileUploader {
 
-    constructor() {
-    }
-
     upload(blob: any, callback: (err: any, url: string) => void) : void {
         let tempPath = path.join('dist', 'files', 'temp');
         if (!fs.existsSync(tempPath)) {
             fs.mkdirSync(tempPath);
         }
 
-        let id: any = new new mongoose.Types.ObjectId();
+        let id: any = new mongoose.Types.ObjectId();
         let fileName = id.toHexString();
         fs.writeFile(`${tempPath}/${fileName}`, blob.data, (err: any) => {
             if (err) {

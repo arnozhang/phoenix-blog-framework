@@ -20,6 +20,7 @@ import {Request, Response} from "express";
 
 import {RetCodes} from "../../base/RetCodes";
 
+import {FileUploader} from "../upload/FileUploader";
 import LocalSaveFileUploader from "../upload/LocalSaveFileUploader";
 
 
@@ -92,5 +93,5 @@ export default class CgiHelper {
         };
     }
 
-    static uploader = new LocalSaveFileUploader();
+    static uploader: FileUploader = new LocalSaveFileUploader();
 }

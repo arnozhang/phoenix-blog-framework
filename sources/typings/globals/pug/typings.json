@@ -1,0 +1,8 @@
+{
+  "resolution": "main",
+  "tree": {
+    "src": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/b36bf17397d104c12df35f44b75cda262946b140/pug/pug.d.ts",
+    "raw": "registry:dt/pug#2.0.0-beta6+20160919072324",
+    "typings": "https://raw.githubusercontent.com/DefinitelyTyped/DefinitelyTyped/b36bf17397d104c12df35f44b75cda262946b140/pug/pug.d.ts"
+  }
+}
