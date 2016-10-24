@@ -11,7 +11,7 @@
 |模块|技术|
 |---|---|
 |语言|Typescript|
-|页面|React.js + CSS-Modules + pug + jquery|
+|页面|React.js + CSS-Modules + pug + jQuery|
 |后台|Node.js + Express|
 |数据库|MongoDB + mongoose|
 
