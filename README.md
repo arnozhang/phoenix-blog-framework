@@ -2,7 +2,7 @@
 
 ### 1、简介
 
-**`phoenix-blog-framework`** 是一款个人博客框架。比如我的个人博客，就是采用这个框架完成的：[http://arnozhang.com/](http://arnozhang.com/)
+**`phoenix-blog-framework`** 是我开发的一款个人博客框架。比如我的个人博客，就是采用这个框架完成的：[http://arnozhang.com/](http://arnozhang.com/)
 
 ![博客截图](https://github.com/arnozhang/phoenix-blog-framework/blob/master/docs/arnozhang-blog.png?raw=true)
 
