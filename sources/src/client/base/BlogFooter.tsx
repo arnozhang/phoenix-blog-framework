@@ -17,9 +17,9 @@
  */
 
 import * as React from "react";
-import * as assign from "lodash/assign";
 
 import PlainLink from "./component/PlainLink";
+import assign = require("lodash/assign");
 
 
 interface Props {
@@ -40,7 +40,7 @@ export default class BlogFooter extends React.Component<Props, any> {
                     Copyright © 2016-2016 build by
                     <PlainLink
                         href='https://github.com/arnozhang/phoenix_blog'
-                        text=' github@phoenix_blog'/>
+                        text='github@phoenix_blog'/>
                     .
                 </span>
             </div>

@@ -17,13 +17,13 @@
  */
 
 import {Request, Response} from "express";
-import * as assign from "lodash/assign";
 
 import {RetCodes} from "../../base/RetCodes";
 
 import {config} from "../config/server.config";
 import {FileUploader} from "../upload/FileUploader";
 import LocalSaveFileUploader from "../upload/LocalSaveFileUploader";
+import assign = require("lodash/assign");
 
 
 export default class CgiHelper {
@@ -47,7 +47,7 @@ export default class CgiHelper {
     }
 
     static receivePostDataString(req: Request, callback: (data: string) => void, encode?: string) {
-        CgiHelper.receivePostData(req, (data: Buffer)=> {
+        CgiHelper.receivePostData(req, (data: Buffer) => {
             if (data) {
                 callback(data.toString(encode ? encode : 'utf-8'));
             } else {
@@ -95,7 +95,7 @@ export default class CgiHelper {
         })
     }
 
-    static dataUrlToBlob(dataUrl: string): {data: Buffer, ext?: string} {
+    static dataUrlToBlob(dataUrl: string): { data: Buffer, ext?: string } {
         if (!dataUrl) {
             return null;
         }

@@ -1,4 +1,5 @@
 const webpack = require('webpack');
+const path = require('path');
 
 
 module.exports = {
@@ -21,39 +22,44 @@ module.exports = {
         'admin/admin_auth_failed': './src/client/admin/AdminAuthInvalid.tsx',
         'admin/admin_category_post': './src/client/admin/AdminCategoryPost.tsx'
     },
+
     output: {
-        path: './dist/build',
+        path: path.join(__dirname, './dist/build'),
         filename: '[name].js'
     },
 
     devtool: "source-map",
 
     resolve: {
-        extensions: ['', '.webpack.js', '.ts', '.tsx', '.js']
+        extensions: ['.webpack.js', '.ts', '.tsx', '.js']
     },
 
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.tsx?$/,
                 exclude: /(node_modules|dist)/,
-                loader: 'ts-loader'
-            },
-            {
-                test: /\.json$/,
-                exclude: /(node_modules|dist)/,
-                loader: 'json-loader'
+                use: [
+                    {
+                        loader: 'ts-loader'
+                    }
+                ]
             },
             {
                 test: /\.css$/,
                 exclude: /(node_modules|dist)/,
-                loader: 'style!css?module&localIdentName=[name]__[local]-[hash:base64:5]'
-            }
-        ],
-
-        preLoaders: [
+                use: [
+                    {
+                        loader: 'style-loader'
+                    },
+                    {
+                        loader: 'css-loader?module&localIdentName=[name]__[local]-[hash:base64:5]'
+                    }
+                ]
+            },
             {
                 test: /\.js$/,
+                enforce: 'pre',
                 loader: 'source-map-loader'
             }
         ]

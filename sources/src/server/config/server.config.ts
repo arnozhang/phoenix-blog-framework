@@ -15,8 +15,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-export var config = {
+export const config = {
     db: {
         host: 'localhost',
         port: 27017,

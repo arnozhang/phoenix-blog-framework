@@ -25,7 +25,7 @@ interface Props {
     href?: string;
     selfWindow?: boolean;
     text?: string;
-    onClick?: React.MouseEventHandler;
+    onClick?: React.MouseEventHandler<HTMLAnchorElement>;
 }
 
 

@@ -20,7 +20,7 @@ import * as React from "react";
 import * as Remarkable from "remarkable";
 
 
-declare var hljs: any;
+declare let hljs: any;
 
 
 interface Props {

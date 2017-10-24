@@ -203,7 +203,7 @@ export default class WriteNewPost extends React.Component<any, any> {
         );
     }
 
-    onPreviewContentChanged(event: FormEvent) {
+    onPreviewContentChanged(event: FormEvent<HTMLTextAreaElement>) {
         this.post.previewContent = (event.target as HTMLTextAreaElement).value;
         this.setState({});
     }
@@ -218,7 +218,7 @@ export default class WriteNewPost extends React.Component<any, any> {
         this.setState({});
     }
 
-    onTitleChanged(event: FormEvent) {
+    onTitleChanged(event: FormEvent<HTMLInputElement>) {
         this.post.title = (event.target as HTMLInputElement).value;
         this.setState({});
     }

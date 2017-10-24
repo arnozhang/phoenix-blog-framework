@@ -18,11 +18,11 @@
 
 import * as React from "react";
 import {ReactInstance} from "react";
-import * as assign from "lodash/assign";
 
 import DialogFrame from "./DialogFrame";
 import EventCenter from "./utils/SimpleEventCenter";
 import {ButtonListener, DialogRender} from "./utils/AppUtils";
+import assign = require("lodash/assign");
 
 const buttonStyles = require('../admin/button.css');
 

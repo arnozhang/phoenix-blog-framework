@@ -24,7 +24,7 @@ interface Props {
     name: string;
     className?: string;
     size?: number;
-    onClick?: React.MouseEventHandler;
+    onClick?: React.MouseEventHandler<HTMLElement>;
 }
 
 

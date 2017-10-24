@@ -17,7 +17,7 @@
  */
 
 import * as React from "react";
-import {ReactInstance, FormEvent} from "react";
+import {FormEvent, ReactInstance} from "react";
 
 import {RetCodes} from "../../base/RetCodes";
 import AppUtils from "../base/utils/AppUtils";
@@ -76,7 +76,7 @@ export default class AdminPostPreviewFrame extends React.Component<Props, any> {
                 <PlainLink
                     style={{paddingTop: 5, paddingBottom: 5, marginTop: 10, fontSize: 13, color: 'white'}}
                     className={buttonStyles.blueButton}
-                    onClick={e => this.modifyTimestamp(post._id)}
+                    onClick={(e: any) => this.modifyTimestamp(post._id)}
                     text='修改时间'/>
                 <PlainLink
                     style={{paddingTop: 5, paddingBottom: 5, marginTop: 10, fontSize: 13, color: 'white'}}
@@ -137,7 +137,7 @@ export default class AdminPostPreviewFrame extends React.Component<Props, any> {
         }, render);
     }
 
-    onPublishTimestampChanged(event: FormEvent) {
+    onPublishTimestampChanged(event: FormEvent<HTMLInputElement>) {
         this.publishTimestamp = (event.target as HTMLInputElement).value;
         this.setState({});
     }

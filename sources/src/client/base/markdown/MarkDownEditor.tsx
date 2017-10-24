@@ -18,12 +18,12 @@
 
 import * as React from "react";
 import {ReactInstance} from "react";
-import * as assign from "lodash/assign";
 import * as ReactCodeMirror from "react-codemirror";
 
 import MarkDownContent from "./MarkDownContent";
 import AppUtils from "../utils/AppUtils";
 import {RetCodes} from "../../../base/RetCodes";
+import assign = require("lodash/assign");
 
 
 // For Codemirror Highlight.

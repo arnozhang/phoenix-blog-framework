@@ -17,7 +17,7 @@
  */
 
 import * as React from "react";
-import {ReactInstance, FormEvent} from "react";
+import {FormEvent, ReactInstance} from "react";
 
 
 interface Props {
@@ -89,8 +89,8 @@ export default class PostTagSelector extends React.Component<Props, any> {
         );
     }
 
-    onInputTagChanged(event: FormEvent) {
-        this.currentInputTag = (event.target as HTMLInputElement).value;
+    onInputTagChanged(event: FormEvent<HTMLInputElement>) {
+        this.currentInputTag = event.currentTarget.value;
         this.setState({});
     }
 

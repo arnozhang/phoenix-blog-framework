@@ -17,24 +17,22 @@
  */
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
-import * as $ from "jquery";
-import * as assign from "lodash/assign";
+
 
 import MiscUtils from "../../../base/utils/MiscUtils";
-import {RetCodes} from "../../../../base/RetCodes";
 import PlainLink from "../../../base/component/PlainLink";
 import FontAwesome from "../../../base/component/FontAwesome";
 import MarkDownContent from "../../../base/markdown/MarkDownContent";
 import TitleHeader from "../common/TitleHeader";
 import BannerFrame from "../common/BannerFrame";
 
-import {PostDetailRender, PostDetailProps} from "../../BlogRender";
+import {PostDetailProps, PostDetailRender} from "../../BlogRender";
+import assign = require("lodash/assign");
 
 const cssStyles = require('../default-styles.css');
 
 
-declare var pageData: any;
+declare let pageData: any;
 
 
 export class DefPostDetailRender extends PostDetailRender<PostDetailProps, any> {
