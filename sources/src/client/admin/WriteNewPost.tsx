@@ -284,7 +284,7 @@ const styles = {
         left: 0,
         bottom: 0,
         backgroundImage: 'url(/main_bkg.jpg)'
-    },
+    } as React.CSSProperties,
     editor_root: {
         position: 'absolute',
         top: 0,
@@ -294,7 +294,7 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         margin: 20
-    },
+    } as React.CSSProperties,
     preview_content: {
         height: 200,
         fontSize: 16,
@@ -302,7 +302,7 @@ const styles = {
         outline: 'none',
         padding: 15,
         border: 'solid 1px #ddd'
-    },
+    } as React.CSSProperties,
     title_zone: {
         display: 'flex',
         flexDirection: 'row',
@@ -310,7 +310,7 @@ const styles = {
         paddingLeft: 20,
         paddingRight: 20,
         backgroundColor: 'rgba(128, 203, 196, 0.6)'
-    },
+    } as React.CSSProperties,
     title: {
         fontSize: 20,
         paddingTop: 15,
@@ -320,14 +320,14 @@ const styles = {
         color: '#01579B',
         border: 'dashed 1px #FFCDD2',
         outline: 'none'
-    },
+    } as React.CSSProperties,
     vert_line: {
         backgroundColor: 'white',
         marginLeft: 40,
         marginRight: 40,
         width: 1,
         height: 40
-    },
+    } as React.CSSProperties,
     category_selector: {
         marginBottom: 20,
         border: 'solid 1px #ddd',
@@ -337,11 +337,11 @@ const styles = {
         paddingLeft: 10,
         paddingRight: 10,
         outline: 'none'
-    },
+    } as React.CSSProperties,
     category_option: {
         paddingTop: 10,
         paddingBottom: 10
-    }
+    } as React.CSSProperties
 };
 
 

@@ -132,10 +132,10 @@ const styles = {
         paddingRight: 15,
         paddingBottom: 15,
         marginBottom: 20
-    },
+    } as React.CSSProperties,
     category_item: {
         padding: '10px 15px',
         marginRight: 15,
         marginTop: 15
-    }
+    } as React.CSSProperties
 };

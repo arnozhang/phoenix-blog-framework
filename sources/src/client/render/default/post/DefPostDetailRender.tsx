@@ -146,13 +146,13 @@ const styles = {
         paddingRight: 30,
         paddingTop: 20,
         paddingBottom: 100
-    },
+    } as React.CSSProperties,
     base_info: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         flexWrap: 'wrap'
-    },
+    } as React.CSSProperties,
     separator: {
         width: 3,
         height: 3,
@@ -160,21 +160,21 @@ const styles = {
         marginLeft: 10,
         marginRight: 10,
         backgroundColor: '#333'
-    },
+    } as React.CSSProperties,
     info_text: {
         fontSize: 12,
         color: '#888'
     },
     pre_tips: {
         color: '#EC407A'
-    },
+    } as React.CSSProperties,
     clickable: {
         cursor: 'pointer'
-    },
+    } as React.CSSProperties,
     tags_root: {
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
         marginBottom: 10
-    }
+    } as React.CSSProperties
 };

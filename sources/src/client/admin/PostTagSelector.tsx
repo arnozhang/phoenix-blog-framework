@@ -125,7 +125,7 @@ const styles = {
         padding: 15,
         fontSize: 16,
         color: '#EC407A'
-    },
+    } as React.CSSProperties,
     tags_root: {
         display: 'flex',
         flexDirection: 'row',
@@ -133,7 +133,7 @@ const styles = {
         padding: '0 15px 15px 15px',
         backgroundColor: '#f0f0f0',
         marginBottom: 20
-    },
+    } as React.CSSProperties,
     tag_item: {
         backgroundColor: '#FFEBEE',
         border: 'solid 1px #FFCDD2',
@@ -144,5 +144,5 @@ const styles = {
         marginRight: 15,
         fontSize: 15,
         WebkitUserSelect: 'none'
-    }
+    } as React.CSSProperties
 };

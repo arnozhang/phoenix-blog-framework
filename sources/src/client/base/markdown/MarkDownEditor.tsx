@@ -193,13 +193,13 @@ const styles = {
     editor_root: {
         display: 'flex',
         flexDirection: 'row'
-    },
+    } as React.CSSProperties,
     panel_wrapper: {
         flex: 1,
         position: 'relative',
         width: '100%',
         height: '100%'
-    },
+    } as React.CSSProperties,
     content_panel: {
         paddingLeft: 20,
         paddingBottom: 10,
@@ -212,5 +212,5 @@ const styles = {
         right: 0,
         left: 0,
         bottom: 0
-    }
+    } as React.CSSProperties
 };

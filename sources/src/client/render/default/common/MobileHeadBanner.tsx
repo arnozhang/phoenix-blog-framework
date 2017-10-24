@@ -105,7 +105,7 @@ const styles = {
         paddingBottom: 30,
         display: 'flex',
         flexDirection: 'column'
-    },
+    } as React.CSSProperties,
     head_portrait: {
         width: 100,
         height: 100,
@@ -114,14 +114,14 @@ const styles = {
         border: 'solid 3px rgba(255, 255, 255, 0.7)',
         cursor: 'pointer',
         userSelect: 'none'
-    },
+    } as React.CSSProperties,
     bottom_info: {
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
         alignItems: 'center',
         marginTop: 5
-    },
+    } as React.CSSProperties,
     separator: {
         width: 3,
         height: 3,
@@ -129,13 +129,13 @@ const styles = {
         marginLeft: 10,
         marginRight: 10,
         backgroundColor: 'white'
-    },
+    } as React.CSSProperties,
     info_text: {
         fontSize: 12,
         color: '#ddd'
-    },
+    } as React.CSSProperties,
     pre_tips: {
         color: '#EC407A',
         cursor: 'pointer'
-    }
+    } as React.CSSProperties
 };

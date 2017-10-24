@@ -56,16 +56,16 @@ class FrameForDesktop extends React.Component<Props, any> {
             left: '10%',
             right: '10%',
             boxShadow: 'rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px'
-        },
+        } as React.CSSProperties,
         content: {
             flex: 1,
             backgroundColor: 'white'
-        },
+        } as React.CSSProperties,
         banner: {
             width: 305,
             overflowY: 'auto',
             backgroundColor: 'rgba(69, 90, 100, 0.5)'
-        }
+        } as React.CSSProperties
     };
 
     render() {
@@ -99,13 +99,13 @@ class FrameForMobile extends React.Component<Props, any> {
             backgroundColor: '#0f3041',
             backgroundSize: 'cover',
             backgroundImage: 'url(/main_bkg_2.jpg)'
-        },
+        } as React.CSSProperties,
         content_root: {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
             backgroundColor: 'white'
-        }
+        } as React.CSSProperties
     };
 
     render() {

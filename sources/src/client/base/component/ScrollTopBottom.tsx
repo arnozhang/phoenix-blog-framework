@@ -72,5 +72,5 @@ const styles = {
         borderRadius: 10,
         backgroundColor: 'rgba(69, 90, 100, 0.8)',
         cursor: 'pointer'
-    }
+    } as React.CSSProperties
 };

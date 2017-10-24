@@ -21,7 +21,7 @@ import * as mongoose from "mongoose";
 import {config} from "../config/server.config";
 
 
-export var db = mongoose.createConnection(
+export const db = mongoose.createConnection(
     config.db.host, config.db.database_name, config.db.port);
 
 db.on('error', () => {

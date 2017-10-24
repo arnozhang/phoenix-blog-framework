@@ -17,7 +17,6 @@
  */
 
 import * as React from "react";
-import * as ReactDOM from "react-dom";
 import *as $ from "jquery";
 
 import {RetCodes} from "../../../../base/RetCodes";
@@ -25,7 +24,7 @@ import PlainLink from "../../../base/component/PlainLink";
 
 import BannerFrame from "../common/BannerFrame";
 import TitleHeader from "../common/TitleHeader";
-import {TagDetailListRender, TagDetailListProps} from "../../BlogRender";
+import {TagDetailListProps, TagDetailListRender} from "../../BlogRender";
 
 const cssStyles = require('../default-styles.css');
 
@@ -80,7 +79,7 @@ const styles = {
         flexDirection: 'row',
         flexWrap: 'wrap',
         padding: 80
-    },
+    } as React.CSSProperties,
     tag_item: {
         color: 'inherit',
         fontSize: 16,
@@ -90,5 +89,5 @@ const styles = {
         paddingBottom: 10,
         paddingLeft: 20,
         paddingRight: 20
-    }
+    } as React.CSSProperties
 };

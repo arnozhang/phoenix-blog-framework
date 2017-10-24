@@ -25,7 +25,7 @@ installCgi(app);
 installRoute(app);
 
 
-var server = app.listen(80, () => {
+const server = app.listen(80, () => {
     let {address, port} = server.address();
     if (address === '::' || address === '') {
         address = 'localhost';

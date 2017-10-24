@@ -133,7 +133,7 @@ const styles = {
         bottom: 0,
         backgroundImage: 'url(/main_bkg_1.jpg)',
         backgroundSize: 'cover'
-    },
+    } as React.CSSProperties,
     content_root: {
         left: '10%',
         right: '10%',
@@ -144,7 +144,7 @@ const styles = {
         flexDirection: 'column',
         backgroundColor: 'white',
         boxShadow: 'rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px'
-    },
+    } as React.CSSProperties,
     tabs: {
         paddingTop: 30,
         paddingBottom: 30,
@@ -153,5 +153,5 @@ const styles = {
         backgroundColor: '#B2DFDB',
         display: 'flex',
         flexDirection: 'row'
-    }
+    } as React.CSSProperties
 };

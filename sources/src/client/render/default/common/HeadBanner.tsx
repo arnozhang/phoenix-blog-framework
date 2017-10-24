@@ -67,13 +67,13 @@ export default class HeadBanner extends BaseHeadBanner< any> {
             flexDirection: 'column',
             alignItems: 'center',
             overflowX: 'hidden'
-        };
+        } as React.CSSProperties;
 
         return (
             <div style={root}>
                 {this.renderUserInfo()}
 
-                <div style={styles.horz_line}></div>
+                <div style={styles.horz_line}/>
                 <TagItem href='/tag_list' text='查看文章标签'/>
                 <TagItem href='/timeline_list' text='查看时间轴'/>
 
@@ -90,7 +90,7 @@ export default class HeadBanner extends BaseHeadBanner< any> {
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'
-        };
+        } as React.CSSProperties;
 
         return (
             <div style={rootStyle}>
@@ -164,7 +164,7 @@ const styles = {
         border: 'solid 3px rgba(255, 255, 255, 0.7)',
         cursor: 'pointer',
         userSelect: 'none'
-    },
+    } as React.CSSProperties,
     count_root: {
         width: '100%',
         display: 'flex',
@@ -177,13 +177,13 @@ const styles = {
         color: 'white',
         fontSize: 14,
         marginTop: 5
-    },
+    } as React.CSSProperties,
     count_item: {
         display: 'flex',
         flexDirection: 'column',
         cursor: 'pointer',
         alignItems: 'center'
-    },
+    } as React.CSSProperties,
     vert_line: {
         width: 1,
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
@@ -191,7 +191,7 @@ const styles = {
         marginLeft: 25,
         marginRight: 25,
         marginTop: 5
-    },
+    } as React.CSSProperties,
     horz_line: {
         width: '100%',
         height: 1,
@@ -200,5 +200,5 @@ const styles = {
         marginLeft: 20,
         marginRight: 20,
         backgroundColor: 'rgba(255, 255, 255, 0.6)'
-    }
+    } as React.CSSProperties
 };

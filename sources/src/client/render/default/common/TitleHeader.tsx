@@ -64,5 +64,5 @@ const styles = {
         flexDirection: 'row',
         alignItems: 'center',
         flexWrap: 'wrap'
-    }
+    } as React.CSSProperties
 };

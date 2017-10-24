@@ -17,14 +17,13 @@
  */
 
 import * as React from 'react';
-import * as ReactDOM from 'react-dom';
 
 import MiscUtils from "../../../base/utils/MiscUtils";
 import {RetCodes} from "../../../../base/RetCodes";
 import PlainLink from "../../../base/component/PlainLink";
 import MarkDownContent from "../../../base/markdown/MarkDownContent";
 
-import {PostPreviewRender, PostPreviewProps} from "../../BlogRender";
+import {PostPreviewProps, PostPreviewRender} from "../../BlogRender";
 
 const cssStyles = require('../default-styles.css');
 
@@ -132,10 +131,10 @@ export default class DefPostPreviewRender extends PostPreviewRender<PostPreviewP
 const styles = {
     content_root: {
         flex: 1,
-    },
+    } as React.CSSProperties,
     content: {
         fontSize: 14
-    },
+    } as React.CSSProperties,
     bottom_info: {
         display: 'flex',
         flexDirection: 'row',
@@ -143,7 +142,7 @@ const styles = {
         flexWrap: 'wrap',
         marginTop: 20,
         marginRight: 10
-    },
+    } as React.CSSProperties,
     separator: {
         width: 3,
         height: 3,
@@ -151,7 +150,7 @@ const styles = {
         marginLeft: 10,
         marginRight: 10,
         backgroundColor: '#333'
-    },
+    } as React.CSSProperties,
     info_text: {
         fontSize: 12,
         color: '#888'
@@ -159,5 +158,5 @@ const styles = {
     pre_tips: {
         color: '#EC407A',
         cursor: 'pointer'
-    }
+    } as React.CSSProperties
 };

@@ -238,11 +238,11 @@ const styles = {
         marginLeft: 20,
         marginRight: 20,
         alignItems: 'center'
-    },
+    } as React.CSSProperties,
     item_text: {
         flex: 1,
         fontSize: 18
-    },
+    } as React.CSSProperties,
     category_name: {
         fontSize: 20,
         width: 400,
@@ -250,7 +250,7 @@ const styles = {
         marginTop: 20,
         border: 'solid 1px #ddd',
         outline: 'none'
-    }
+    } as React.CSSProperties
 };
 
 

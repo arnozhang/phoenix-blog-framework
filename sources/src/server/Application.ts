@@ -21,7 +21,7 @@ import * as bodyParser from "body-parser";
 import * as pug from "pug";
 
 
-export var app = express();
+export const app = express();
 
 
 function configurationViewEngine() {
