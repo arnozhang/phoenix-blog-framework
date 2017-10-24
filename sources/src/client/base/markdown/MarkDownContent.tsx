@@ -17,7 +17,7 @@
  */
 
 import * as React from "react";
-import * as Remarkable from "remarkable";
+import Remarkable from "remarkable";
 
 
 declare let hljs: any;
@@ -31,7 +31,7 @@ interface Props {
 
 export default class MarkDownContent extends React.Component<Props, any> {
 
-    remarkable: Remarkable;
+    remarkable: any;
 
     constructor(props: Props) {
         super(props);
