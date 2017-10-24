@@ -20,6 +20,7 @@ import * as React from "react";
 
 import MiscUtils from "../../../base/utils/MiscUtils";
 import FontAwesome from "../../../base/component/FontAwesome";
+import {ReactStyles} from "../../../base/component/ReactStyles";
 
 const cssStyles = require('../default-styles.css');
 
@@ -58,11 +59,11 @@ export default class TitleHeader extends React.Component<Props, any> {
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     title_root: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         flexWrap: 'wrap'
-    } as React.CSSProperties
+    }
 };

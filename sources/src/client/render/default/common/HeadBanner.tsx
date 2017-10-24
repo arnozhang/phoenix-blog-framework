@@ -23,6 +23,7 @@ import FontAwesome from "../../../base/component/FontAwesome";
 import PlainLink from "../../../base/component/PlainLink";
 
 import BaseHeadBanner, {HeadBannerProps} from "./BaseHeadBanner";
+import {ReactStyles} from "../../../base/component/ReactStyles";
 
 const cssStyles = require('../default-styles.css');
 
@@ -61,13 +62,13 @@ export default class HeadBanner extends BaseHeadBanner< any> {
     }
 
     render() {
-        let root = {
+        let root: React.CSSProperties = {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center',
             overflowX: 'hidden'
-        } as React.CSSProperties;
+        };
 
         return (
             <div style={root}>
@@ -85,12 +86,12 @@ export default class HeadBanner extends BaseHeadBanner< any> {
     renderUserInfo() {
         let info = this.state && this.state.info ? this.state.info : {};
 
-        let rootStyle = {
+        let rootStyle: React.CSSProperties = {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
             alignItems: 'center'
-        } as React.CSSProperties;
+        };
 
         return (
             <div style={rootStyle}>
@@ -154,7 +155,7 @@ export default class HeadBanner extends BaseHeadBanner< any> {
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     head_portrait: {
         width: 100,
         height: 100,
@@ -164,7 +165,7 @@ const styles = {
         border: 'solid 3px rgba(255, 255, 255, 0.7)',
         cursor: 'pointer',
         userSelect: 'none'
-    } as React.CSSProperties,
+    },
     count_root: {
         width: '100%',
         display: 'flex',
@@ -172,18 +173,18 @@ const styles = {
         marginTop: 40,
         justifyContent: 'center',
         alignItems: 'center'
-    } as React.CSSProperties,
+    },
     count: {
         color: 'white',
         fontSize: 14,
         marginTop: 5
-    } as React.CSSProperties,
+    },
     count_item: {
         display: 'flex',
         flexDirection: 'column',
         cursor: 'pointer',
         alignItems: 'center'
-    } as React.CSSProperties,
+    },
     vert_line: {
         width: 1,
         backgroundColor: 'rgba(255, 255, 255, 0.6)',
@@ -191,7 +192,7 @@ const styles = {
         marginLeft: 25,
         marginRight: 25,
         marginTop: 5
-    } as React.CSSProperties,
+    },
     horz_line: {
         width: '100%',
         height: 1,
@@ -200,5 +201,5 @@ const styles = {
         marginLeft: 20,
         marginRight: 20,
         backgroundColor: 'rgba(255, 255, 255, 0.6)'
-    } as React.CSSProperties
+    }
 };

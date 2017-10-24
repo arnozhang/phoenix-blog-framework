@@ -22,6 +22,7 @@ import {ReactNode} from "react";
 import BlogBaseFrame from "../base/BlogBaseFrame";
 import BlogFooter from "../base/BlogFooter";
 import ScrollTopBottom from "../base/component/ScrollTopBottom";
+import {ReactStyles} from "../base/component/ReactStyles";
 
 let cssStyles = require('./admin.css');
 let buttonStyles = require('./button.css');
@@ -124,7 +125,7 @@ export default class AdminFrame extends React.Component<Props, any> {
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     admin_root: {
         position: 'absolute',
         top: 0,
@@ -133,7 +134,7 @@ const styles = {
         bottom: 0,
         backgroundImage: 'url(/main_bkg_1.jpg)',
         backgroundSize: 'cover'
-    } as React.CSSProperties,
+    },
     content_root: {
         left: '10%',
         right: '10%',
@@ -144,7 +145,7 @@ const styles = {
         flexDirection: 'column',
         backgroundColor: 'white',
         boxShadow: 'rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px'
-    } as React.CSSProperties,
+    },
     tabs: {
         paddingTop: 30,
         paddingBottom: 30,
@@ -153,5 +154,5 @@ const styles = {
         backgroundColor: '#B2DFDB',
         display: 'flex',
         flexDirection: 'row'
-    } as React.CSSProperties
+    }
 };

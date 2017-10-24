@@ -27,6 +27,7 @@ import TitleHeader from "../common/TitleHeader";
 import BannerFrame from "../common/BannerFrame";
 
 import {PostDetailProps, PostDetailRender} from "../../BlogRender";
+import {ReactStyles} from "../../../base/component/ReactStyles";
 import assign = require("lodash/assign");
 
 const cssStyles = require('../default-styles.css');
@@ -140,19 +141,19 @@ export class DefPostDetailRender extends PostDetailRender<PostDetailProps, any> 
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     post_root: {
         paddingLeft: 30,
         paddingRight: 30,
         paddingTop: 20,
         paddingBottom: 100
-    } as React.CSSProperties,
+    },
     base_info: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         flexWrap: 'wrap'
-    } as React.CSSProperties,
+    },
     separator: {
         width: 3,
         height: 3,
@@ -160,21 +161,21 @@ const styles = {
         marginLeft: 10,
         marginRight: 10,
         backgroundColor: '#333'
-    } as React.CSSProperties,
+    },
     info_text: {
         fontSize: 12,
         color: '#888'
     },
     pre_tips: {
         color: '#EC407A'
-    } as React.CSSProperties,
+    },
     clickable: {
         cursor: 'pointer'
-    } as React.CSSProperties,
+    },
     tags_root: {
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
         marginBottom: 10
-    } as React.CSSProperties
+    }
 };

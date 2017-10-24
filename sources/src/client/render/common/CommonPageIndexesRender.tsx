@@ -18,7 +18,8 @@
 
 import * as React from "react";
 import PlainLink from "../../base/component/PlainLink";
-import {PageIndexesRender, PageIndexesProps} from "../BlogRender";
+import {PageIndexesProps, PageIndexesRender} from "../BlogRender";
+import {ReactStyles} from "../../base/component/ReactStyles";
 
 const cssStyles = require('./common-render.css');
 
@@ -111,7 +112,7 @@ export default class CommonPageIndexesRender extends PageIndexesRender<PageIndex
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     indexes_root: {
         display: 'flex',
         flexDirection: 'row',
@@ -121,5 +122,5 @@ const styles = {
         paddingLeft: 10,
         paddingRight: 10,
         alignItems: 'center'
-    } as React.CSSProperties
+    }
 };

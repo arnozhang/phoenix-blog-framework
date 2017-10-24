@@ -20,6 +20,7 @@ import * as React from "react";
 import * as $ from "jquery";
 
 import {RetCodes} from "../../base/RetCodes";
+import {ReactStyles} from "../base/component/ReactStyles";
 
 const cssStyles = require('./admin.css');
 
@@ -122,7 +123,7 @@ export default class CategorySelector extends React.Component<Props, any> {
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     selector: {
         display: 'flex',
         flexDirection: 'row',
@@ -132,10 +133,10 @@ const styles = {
         paddingRight: 15,
         paddingBottom: 15,
         marginBottom: 20
-    } as React.CSSProperties,
+    },
     category_item: {
         padding: '10px 15px',
         marginRight: 15,
         marginTop: 15
-    } as React.CSSProperties
+    }
 };

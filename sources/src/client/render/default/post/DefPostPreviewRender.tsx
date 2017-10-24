@@ -24,6 +24,7 @@ import PlainLink from "../../../base/component/PlainLink";
 import MarkDownContent from "../../../base/markdown/MarkDownContent";
 
 import {PostPreviewProps, PostPreviewRender} from "../../BlogRender";
+import {ReactStyles} from "../../../base/component/ReactStyles";
 
 const cssStyles = require('../default-styles.css');
 
@@ -34,7 +35,7 @@ export default class DefPostPreviewRender extends PostPreviewRender<PostPreviewP
         let post = this.props.post;
         let postImage: any = null;
         if (post.previewImage && !MiscUtils.visitByMobile()) {
-            let style = {
+            let style : React.CSSProperties= {
                 width: 100,
                 height: 100,
                 borderRadius: 5,
@@ -128,13 +129,13 @@ export default class DefPostPreviewRender extends PostPreviewRender<PostPreviewP
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     content_root: {
         flex: 1,
-    } as React.CSSProperties,
+    },
     content: {
         fontSize: 14
-    } as React.CSSProperties,
+    },
     bottom_info: {
         display: 'flex',
         flexDirection: 'row',
@@ -142,7 +143,7 @@ const styles = {
         flexWrap: 'wrap',
         marginTop: 20,
         marginRight: 10
-    } as React.CSSProperties,
+    },
     separator: {
         width: 3,
         height: 3,
@@ -150,7 +151,7 @@ const styles = {
         marginLeft: 10,
         marginRight: 10,
         backgroundColor: '#333'
-    } as React.CSSProperties,
+    },
     info_text: {
         fontSize: 12,
         color: '#888'
@@ -158,5 +159,5 @@ const styles = {
     pre_tips: {
         color: '#EC407A',
         cursor: 'pointer'
-    } as React.CSSProperties
+    }
 };

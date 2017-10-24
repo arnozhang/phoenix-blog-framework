@@ -20,6 +20,7 @@ import * as React from "react";
 import * as $ from "jquery";
 
 import FontAwesome from "./FontAwesome";
+import {ReactStyles} from "./ReactStyles";
 
 const cssStyles = require('../base.css');
 
@@ -59,7 +60,7 @@ export default class ScrollTopBottom extends React.Component<Props, any> {
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     scroll_pin: {
         display: 'flex',
         flexDirection: 'column',
@@ -72,5 +73,5 @@ const styles = {
         borderRadius: 10,
         backgroundColor: 'rgba(69, 90, 100, 0.8)',
         cursor: 'pointer'
-    } as React.CSSProperties
+    }
 };

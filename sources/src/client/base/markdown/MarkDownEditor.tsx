@@ -23,6 +23,7 @@ import * as ReactCodeMirror from "react-codemirror";
 import MarkDownContent from "./MarkDownContent";
 import AppUtils from "../utils/AppUtils";
 import {RetCodes} from "../../../base/RetCodes";
+import {ReactStyles} from "../component/ReactStyles";
 import assign = require("lodash/assign");
 
 
@@ -33,7 +34,6 @@ require('codemirror/mode/xml/xml');
 require('codemirror/mode/markdown/markdown');
 require('codemirror/mode/css/css');
 require('codemirror/mode/clike/clike');
-
 
 
 interface Props {
@@ -189,17 +189,17 @@ export default class MarkDownEditor extends React.Component<Props, any> {
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     editor_root: {
         display: 'flex',
         flexDirection: 'row'
-    } as React.CSSProperties,
+    },
     panel_wrapper: {
         flex: 1,
         position: 'relative',
         width: '100%',
         height: '100%'
-    } as React.CSSProperties,
+    },
     content_panel: {
         paddingLeft: 20,
         paddingBottom: 10,
@@ -212,5 +212,5 @@ const styles = {
         right: 0,
         left: 0,
         bottom: 0
-    } as React.CSSProperties
+    }
 };

@@ -25,6 +25,7 @@ import PlainLink from "../../../base/component/PlainLink";
 import BannerFrame from "../common/BannerFrame";
 import TitleHeader from "../common/TitleHeader";
 import {TagDetailListProps, TagDetailListRender} from "../../BlogRender";
+import {ReactStyles} from "../../../base/component/ReactStyles";
 
 const cssStyles = require('../default-styles.css');
 
@@ -73,13 +74,13 @@ export default class DefTagDetailListRender extends TagDetailListRender<TagDetai
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     tags_root: {
         display: 'flex',
         flexDirection: 'row',
         flexWrap: 'wrap',
         padding: 80
-    } as React.CSSProperties,
+    },
     tag_item: {
         color: 'inherit',
         fontSize: 16,
@@ -89,5 +90,5 @@ const styles = {
         paddingBottom: 10,
         paddingLeft: 20,
         paddingRight: 20
-    } as React.CSSProperties
+    }
 };

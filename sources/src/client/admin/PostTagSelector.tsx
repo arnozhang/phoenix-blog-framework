@@ -18,6 +18,7 @@
 
 import * as React from "react";
 import {FormEvent, ReactInstance} from "react";
+import {ReactStyles} from "../base/component/ReactStyles";
 
 
 interface Props {
@@ -117,7 +118,7 @@ export default class PostTagSelector extends React.Component<Props, any> {
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     input: {
         flex: 1,
         border: 'solid 1px #ddd',
@@ -125,7 +126,7 @@ const styles = {
         padding: 15,
         fontSize: 16,
         color: '#EC407A'
-    } as React.CSSProperties,
+    },
     tags_root: {
         display: 'flex',
         flexDirection: 'row',
@@ -133,7 +134,7 @@ const styles = {
         padding: '0 15px 15px 15px',
         backgroundColor: '#f0f0f0',
         marginBottom: 20
-    } as React.CSSProperties,
+    },
     tag_item: {
         backgroundColor: '#FFEBEE',
         border: 'solid 1px #FFCDD2',
@@ -144,5 +145,5 @@ const styles = {
         marginRight: 15,
         fontSize: 15,
         WebkitUserSelect: 'none'
-    } as React.CSSProperties
+    }
 };

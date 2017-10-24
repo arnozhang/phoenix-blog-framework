@@ -22,6 +22,7 @@ import * as ReactDOM from "react-dom";
 import BlogFooter from "../../base/BlogFooter";
 import FontAwesome from "../../base/component/FontAwesome";
 import RenderEngines from "../../render/RenderEngines";
+import {ReactStyles} from "../../base/component/ReactStyles";
 
 
 export class Error404Page extends React.Component<any, any> {
@@ -62,7 +63,7 @@ export class Error404Page extends React.Component<any, any> {
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     root: {
         position: 'absolute',
         left: 0,
@@ -74,7 +75,7 @@ const styles = {
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#fafafa'
-    } as React.CSSProperties,
+    },
     content: {
         border: 'solid 2px #EF9A9A',
         backgroundColor: 'white',
@@ -83,7 +84,7 @@ const styles = {
         borderRadius: 20,
         marginBottom: 80,
         boxShadow: 'rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px'
-    } as React.CSSProperties,
+    },
     tips_root_content: {
         display: 'flex',
         flexDirection: 'column',
@@ -93,13 +94,13 @@ const styles = {
         marginBottom: 100,
         marginLeft: 240,
         marginRight: 240
-    } as React.CSSProperties,
+    },
     tips_content: {
         display: 'flex',
         flexDirection: 'row',
         alignItems: 'center',
         justifyContent: 'center'
-    } as React.CSSProperties
+    }
 };
 
 

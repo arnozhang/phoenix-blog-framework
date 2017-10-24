@@ -27,6 +27,7 @@ import DialogFrame from "../base/DialogFrame";
 import FontAwesome from "../base/component/FontAwesome";
 
 import AdminFrame, {ManageTabType} from "./AdminFrame";
+import {ReactStyles} from "../base/component/ReactStyles";
 
 let cssStyles = require('./admin.css');
 let buttonStyles = require('./button.css');
@@ -43,7 +44,7 @@ class CategoryItem extends React.Component<ItemProps, any> {
     render() {
         return (
             <div style={styles.item_root} className={cssStyles.categoryItem}
-                 onClick={() => location.href =`/admin_category_post/${this.props.category._id}`}>
+                 onClick={() => location.href = `/admin_category_post/${this.props.category._id}`}>
 
                 <span style={styles.item_text}>{this.props.category.name}</span>
                 <span style={{marginLeft: 10, marginRight: 20, fontSize: 14}}>
@@ -229,7 +230,7 @@ export default class CategoryManager extends React.Component<any, any> {
 }
 
 
-const styles = {
+const styles: ReactStyles = {
     item_root: {
         display: 'flex',
         flexDirection: 'row',
@@ -238,11 +239,11 @@ const styles = {
         marginLeft: 20,
         marginRight: 20,
         alignItems: 'center'
-    } as React.CSSProperties,
+    },
     item_text: {
         flex: 1,
         fontSize: 18
-    } as React.CSSProperties,
+    },
     category_name: {
         fontSize: 20,
         width: 400,
@@ -250,10 +251,10 @@ const styles = {
         marginTop: 20,
         border: 'solid 1px #ddd',
         outline: 'none'
-    } as React.CSSProperties
+    }
 };
 
 
 ReactDOM.render(
-    <CategoryManager />,
+    <CategoryManager/>,
     document.getElementById('react-content'));

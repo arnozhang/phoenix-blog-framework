@@ -24,6 +24,7 @@ import MiscUtils from "../../../base/utils/MiscUtils";
 import ScrollTopBottom from "../../../base/component/ScrollTopBottom";
 
 import MobileHeadBanner from "./MobileHeadBanner";
+import {ReactStyles} from "../../../base/component/ReactStyles";
 
 
 interface Props {
@@ -33,7 +34,7 @@ interface Props {
 
 class FrameForDesktop extends React.Component<Props, any> {
 
-    static innerStyles = {
+    static innerStyles: ReactStyles = {
         root: {
             position: 'absolute',
             top: 0,
@@ -46,7 +47,7 @@ class FrameForDesktop extends React.Component<Props, any> {
             backgroundColor: '#33888b',
             backgroundSize: 'cover',
             backgroundImage: 'url(/main_bkg_2.jpg)'
-        } as React.CSSProperties,
+        },
         content_root: {
             display: 'flex',
             flexDirection: 'row',
@@ -56,16 +57,16 @@ class FrameForDesktop extends React.Component<Props, any> {
             left: '10%',
             right: '10%',
             boxShadow: 'rgba(0, 0, 0, 0.16) 0px 3px 10px, rgba(0, 0, 0, 0.23) 0px 3px 10px'
-        } as React.CSSProperties,
+        },
         content: {
             flex: 1,
             backgroundColor: 'white'
-        } as React.CSSProperties,
+        },
         banner: {
             width: 305,
             overflowY: 'auto',
             backgroundColor: 'rgba(69, 90, 100, 0.5)'
-        } as React.CSSProperties
+        }
     };
 
     render() {
@@ -92,20 +93,20 @@ class FrameForDesktop extends React.Component<Props, any> {
 
 class FrameForMobile extends React.Component<Props, any> {
 
-    static innerStyles = {
+    static innerStyles: ReactStyles = {
         root: {
             display: 'flex',
             flexDirection: 'column',
             backgroundColor: '#0f3041',
             backgroundSize: 'cover',
             backgroundImage: 'url(/main_bkg_2.jpg)'
-        } as React.CSSProperties,
+        },
         content_root: {
             width: '100%',
             display: 'flex',
             flexDirection: 'column',
             backgroundColor: 'white'
-        } as React.CSSProperties
+        }
     };
 
     render() {
